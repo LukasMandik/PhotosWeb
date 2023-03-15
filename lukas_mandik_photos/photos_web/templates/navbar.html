@@ -1,0 +1,21 @@
+{% load static %}
+<div class="wrapper">
+    <div class="navbar">
+        <div class="inner_navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/media/lm_logo.png"></a>
+            </div>
+                <div class="menu">
+                <!--<nav>-->
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About me</a></li>
+                        <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+    </div>
+</div>

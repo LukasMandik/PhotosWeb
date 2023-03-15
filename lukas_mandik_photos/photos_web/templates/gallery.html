@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+    <div class="content">
+        {% for photo in photos %}
+        <div class="photo">
+            <img src="../static/media/{{ photo.image_name }} " alt="{{ photo.name }}">
+
+            <p>{{ photo.name }}</p>
+            <p>{{ photo.description }}</p>
+
+
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
