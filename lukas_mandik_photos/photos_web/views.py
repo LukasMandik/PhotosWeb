@@ -11,7 +11,9 @@ def hello_world(request):
 
 
 def home(request):
-    return render(request, 'home.html')
+    photos = Photo.objects.all()
+    context = {'photos': photos}
+    return render(request, 'home.html', context)
 
 
 def gallery(request):

@@ -1,17 +1,82 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}HOME{% endblock %}
-
 {% block content %}
-<div class="home">
-    <div class="inner_home">
+
+<div class="slideshow-container">
+    {% for photo in photos %}
+    <div class="mySlides fade">
+        <img src="../static/media/{{ photo.image_name }}" style="width:100%">
+        <div class="text">{{ photo.name }}</div>
+    </div>
+    {% endfor %}
+
+
+    <div class="row_dot" style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+<!--    <div class="mySlides fade">-->
+<!--        <img src="../static/media/_DSC3824.JPG" style="width:100%">-->
+<!--        <div class="text">Caption Two</div>-->
+<!--    </div>-->
+
+<!--    <div class="mySlides fade">-->
+<!--        <img src="../static/media/_DSC3827.JPG" style="width:100%">-->
+<!--        <div class="text">Caption Three</div>-->
+<!--    </div>-->
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+
+
+
+
+<!--<div class="home">-->
+<!--    <div class="inner_home">-->
 <!--        <h2>{{ message }}</h2>-->
 <!--        <img src="{% static 'media/date.png' %}" alt="image_description">-->
 <!--        <div class="countdown">-->
 <!--            <p>{{ text }}</p>-->
 <!--            <h2>{{ days }} {{ days_text }}</h2>-->
 <!--            <p>{{ hours }} {{ hours_text }} {{ minutes }} {{ minutes_text }} {{ seconds }} {{ seconds_text }}.</p>-->
-        </div>
-    </div>
-</div>
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<script>
+
+
+
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
 {% endblock %}

@@ -4,17 +4,24 @@
 
 
 {% block content %}
-    <div class="content">
+    <div class="container">
+
         {% for photo in photos %}
-        <div class="photo">
-            <img src="../static/media/{{ photo.image_name }} " alt="{{ photo.name }}">
-
-            <p>{{ photo.name }}</p>
-            <p>{{ photo.description }}</p>
-
-
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <div class="image">
+                    <img src="../static/media/{{ photo.image_name }}" alt="{{ photo.name }}">
+                </div>
+                <div class="gallery-text">
+                  <p>{{ photo.name }}</p>
+                </div>
+<!--                    <p>{{ photo.name }}</p>-->
+<!--                    <p>{{ photo.description }}</p>-->
+            </div>
         </div>
         {% endfor %}
     </div>
+    </div>
+
 
 {% endblock %}
