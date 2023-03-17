@@ -2,7 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from django.shortcuts import render
-from .models import Photo
+from .models import Photo, MetaPhoto
+from PIL import Image
+from PIL.ExifTags import TAGS
+from django.shortcuts import render
+
+from PIL import Image
 # Create your views here.
 
 
