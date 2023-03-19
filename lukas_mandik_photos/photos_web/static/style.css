@@ -176,7 +176,9 @@ li.dropdown{
 /* Caption text */
 .text {
   color: var(--primary-color1);
-  font-size: 15px;
+  font-size: 20px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
   padding: 8px 12px;
   position: absolute;
   top: 10px;
@@ -206,8 +208,8 @@ li.dropdown{
 
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 10px;
+  width: 10px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
@@ -246,7 +248,7 @@ li.dropdown{
 	align-items: stretch;
 	place-items: flex-start;
 	max-width: 800px;
-    margin: 15% auto;
+    margin: 25% auto;
     text-align: center;
 	z-index: 10;
 }
@@ -262,7 +264,8 @@ li.dropdown{
 	height: 100%;
 	aspect-ratio: 3/3;
 	overflow: hidden;
-	border-radius: 2px;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.01)
 }
 
 .gallery-item .image img{
@@ -326,7 +329,7 @@ li.dropdown{
 	100%{
 		top: 50%;
 	}
-	
+
 }
 @media (max-width: 992px)
 {
