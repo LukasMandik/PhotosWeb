@@ -6,9 +6,9 @@ import os
 
 class Photo(models.Model):
     name = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='photos_web/static/photos')
+    image = models.ImageField(blank=True, null=True,)
     # webp_image = models.ImageField(upload_to='photos_web/static/photos', blank=True, null=True)
-    png_image = models.ImageField(upload_to='photos_web/static/photos', blank=True, null=True)
+    png_image = models.ImageField(blank=True, null=True)
     image_name = models.CharField(max_length=200, blank=True, null=True,)
     file_name = models.CharField(max_length=200, blank=True, null=True,)
     description = models.TextField()
@@ -98,7 +98,7 @@ class Photo(models.Model):
 
         png_image_path = os.path.splitext(self.image.path)[0] + '.png'
         img.save(png_image_path, 'PNG', compress_level=9)
-        self.png_image.name = os.path.join('photos_web', 'static', 'photos', os.path.basename(png_image_path))
+        self.png_image.name = os.path.join(os.path.basename(png_image_path))
 
         img = Image.open(self.image.path)
         stats = ImageStat.Stat(img)

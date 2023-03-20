@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+    <div class="container">
+        {% for photo in photos %}
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <div class="image">
+<!--                    <a href="{% static 'photos/' %}{{ photo.file_name }}.png">-->
+                    <a href="{% url 'photo' photo.id %}">
+                        <img src="{{photo.png_image.url}}" alt="{{ photo.name }}">
+                    </a>
+                </div>
+                <div class="gallery-text">
+                  <p>{{ photo.name }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+<!-- Add Lightbox CSS -->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqFjcJ6pajs/rfdfs3SO+kD4Ck5BdPtF+to8xMmUqsbTG" crossorigin="anonymous">-->
+
+<!-- Add Lightbox JS -->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha384-4O1XtMzIyF0b11hE7Ii6ku2K/r7f0mJxyxgLnXrJr59b6EGGoIjP4t7W3mek3KwN" crossorigin="anonymous"></script>-->
+
+
+
+{% endblock %}

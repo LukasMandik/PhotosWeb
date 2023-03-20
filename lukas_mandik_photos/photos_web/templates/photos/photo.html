@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Photo{% endblock %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <a href="{% url 'gallery'%}">Go back</a>
+    <img src="{{ photo.png_image.url }}">
+
+    <p>{{ photo.description }}</p>
+    <p>{{ photo.timestamp }}</p>
+</div>
+
+
+{% endblock %}

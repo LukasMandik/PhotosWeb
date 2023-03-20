@@ -9,7 +9,6 @@ from django.shortcuts import render
 from .models import Photo
 
 
-
 def hello_world(request):
     return HttpResponse("Hello world!")
 
@@ -23,7 +22,14 @@ def home(request):
 def gallery(request):
     photos = Photo.objects.all()
     context = {'photos': photos}
-    return render(request, 'gallery.html', context)
+    return render(request, 'photos/gallery.html', context)
+
+
+def view_photo(request, pk):
+    photo = Photo.objects.get(id=pk)
+    context = {'photo': photo}
+    return render(request, 'photos/photo.html', context)
+
 
 
 
