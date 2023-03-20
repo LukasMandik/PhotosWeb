@@ -1,19 +1,17 @@
-import json
-from datetime import datetime
-
 from django.db import models
-from django.urls import reverse
-from django.db.models.signals import post_save
-from django.dispatch import receiver
-from PIL import Image, ExifTags
+from PIL import Image, ExifTags, ImageStat
+from datetime import datetime
+import os
 
 
 class Photo(models.Model):
     name = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='media/photos/')
+    image = models.ImageField(upload_to='photos_web/static/photos')
+    # webp_image = models.ImageField(upload_to='photos_web/static/photos', blank=True, null=True)
+    png_image = models.ImageField(upload_to='photos_web/static/photos', blank=True, null=True)
     image_name = models.CharField(max_length=200, blank=True, null=True,)
+    file_name = models.CharField(max_length=200, blank=True, null=True,)
     description = models.TextField()
-    orientation = models.IntegerField(blank=True, null=True)
     timestamp = models.DateTimeField(blank=True, null=True)
     device = models.CharField(max_length=200, blank=True, null=True)
     width = models.IntegerField(blank=True, null=True)
@@ -21,7 +19,27 @@ class Photo(models.Model):
     gps_coordinates = models.CharField(max_length=100, blank=True, null=True)
     meta_data = models.TextField(blank=True, null=True)
 
+    image_mode = models.CharField(max_length=10, blank=True, null=True)
+    image_size = models.CharField(max_length=100, blank=True, null=True)
+    bands = models.CharField(max_length=100, blank=True, null=True)
+    mean = models.CharField(max_length=100, blank=True, null=True)
+    median = models.CharField(max_length=100, blank=True, null=True)
+    std_dev = models.CharField(max_length=100, blank=True, null=True)
+    brightness = models.CharField(max_length=100, blank=True, null=True)
+
     def save(self, *args, **kwargs):
+
+        if self.image and not self.image_name:
+            self.image_name = self.image.name
+
+        if self.image and not self.file_name:
+              # self.file_name = os.path.basename(self.image.name)
+            # Extract the file name without the extension
+            base_name, _ = os.path.splitext(self.image.name)
+            self.file_name = os.path.basename(base_name)
+
+        super(Photo, self).save(*args, **kwargs)
+
         img = Image.open(self.image)
         exif_data_raw = img._getexif()
         exif_data = {}
@@ -31,9 +49,7 @@ class Photo(models.Model):
                 if tag in ExifTags.TAGS:
                     exif_data[ExifTags.TAGS[tag]] = value
 
-                    # Save orientation
-                    if "Orientation" in exif_data:
-                        self.orientation = exif_data["Orientation"]
+
 
                     # Save timestamp
                     if "DateTimeOriginal" in exif_data:
@@ -42,8 +58,8 @@ class Photo(models.Model):
                         self.timestamp = date_time_obj
 
                     # Save device
-                    if "Model" in exif_data:
-                        self.device = f"{exif_data['Model']}"
+                    if "Model" in exif_data and "Make" in exif_data:
+                        self.device = f"{exif_data['Model']} {exif_data['Make']}"
 
                     # Save width and height
                     self.width, self.height = img.size
@@ -64,8 +80,37 @@ class Photo(models.Model):
                     # Save EXIF data to meta_data
                     self.meta_data = exif_data
 
-        if self.image and not self.image_name:
-            self.image_name = self.image.name
+        # # Convert the image to WebP format
+        # width, height = img.size
+        # new_size = (width // 7, height // 7)
+        # img.thumbnail(new_size)
+        #
+        # webp_image_path = os.path.splitext(self.image.path)[0] + '.webp'
+        # img.save(webp_image_path, 'WEBP', quality=100, lossless=True)
+        # self.webp_image.name = os.path.join('photos_web', 'static', 'photos', os.path.basename(webp_image_path))
+
+        # Convert the image to PNG format
+        img = Image.open(self.image.path)
+
+        width, height = img.size
+        new_size = (width // 7, height // 7)
+        img.thumbnail(new_size)
+
+        png_image_path = os.path.splitext(self.image.path)[0] + '.png'
+        img.save(png_image_path, 'PNG', compress_level=9)
+        self.png_image.name = os.path.join('photos_web', 'static', 'photos', os.path.basename(png_image_path))
+
+        img = Image.open(self.image.path)
+        stats = ImageStat.Stat(img)
+
+        self.image_mode = img.mode
+        self.image_size = str(img.size)
+        self.bands = ', '.join(img.getbands())
+        self.mean = ', '.join(map(str, stats.mean))
+        self.median = ', '.join(map(str, stats.median))
+        self.std_dev = ', '.join(map(str, stats.stddev))
+        self.brightness = ', '.join(map(str, stats.rms))
+
         super(Photo, self).save(*args, **kwargs)
 
     def __str__(self):

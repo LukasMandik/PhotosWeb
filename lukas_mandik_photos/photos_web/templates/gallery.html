@@ -10,7 +10,7 @@
         <div class="gallery-container">
             <div class="gallery-item">
                 <div class="image">
-                    <img src="../static/media/{{ photo.image_name }}" alt="{{ photo.name }}">
+                    <img src="{% static 'photos/' %}{{ photo.file_name }}.png" alt="{{ photo.name }}">
                 </div>
                 <div class="gallery-text">
                   <p>{{ photo.name }}</p>
