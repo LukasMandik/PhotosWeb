@@ -3,21 +3,36 @@
 {% load static %}
 {% block content %}
     <div class="container">
-        {% for photo in photos %}
-        <div class="gallery-container">
-            <div class="gallery-item">
-                <div class="image">
-<!--                    <a href="{% static 'photos/' %}{{ photo.file_name }}.png">-->
-                    <a href="{% url 'photo' photo.id %}">
-                        <img src="{{photo.png_image.url}}" alt="{{ photo.name }}">
-                    </a>
-                </div>
-                <div class="gallery-text">
-                  <p>{{ photo.name }}</p>
-                </div>
-            </div>
+        <div class="categories">
+            <ul>
+        <div class="categories_item">
+            <li{% if not selected_category %} class="selected"{% endif %}><a href="{% url 'gallery' %}">All</a></li>
+        </div>
+        {% for category in categories %}
+        <div class="categories_item">
+            <li{% if category.name == selected_category %} class="selected"{% endif %}><a href="{% url 'gallery' %}?category={{ category.name }}">{{ category.name }}</a></li>
         </div>
         {% endfor %}
+             </ul>
+        </div>
+        <div class="container_grid">
+            {% for photo in photos %}
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <div class="image">
+                        <a href="{% url 'photo' photo.id %}">
+                            <img src="{{photo.png_image.url}}" alt="{{ photo.name }}">
+                        </a>
+                    </div>
+                    <div class="gallery-text">
+                      <p>{{ photo.name }}</p>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <p>empty</p>
+            {% endfor %}
+        </div>
     </div>
 
 <!-- Add Lightbox CSS -->

@@ -4,9 +4,17 @@ from datetime import datetime
 import os
 
 
+class Category(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+
+    def __str__(self):
+        return self.name
+
+
 class Photo(models.Model):
     name = models.CharField(max_length=200)
     image = models.ImageField(blank=True, null=True,)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
     # webp_image = models.ImageField(upload_to='photos_web/static/photos', blank=True, null=True)
     png_image = models.ImageField(blank=True, null=True)
     image_name = models.CharField(max_length=200, blank=True, null=True,)
@@ -48,8 +56,6 @@ class Photo(models.Model):
             for tag, value in exif_data_raw.items():
                 if tag in ExifTags.TAGS:
                     exif_data[ExifTags.TAGS[tag]] = value
-
-
 
                     # Save timestamp
                     if "DateTimeOriginal" in exif_data:

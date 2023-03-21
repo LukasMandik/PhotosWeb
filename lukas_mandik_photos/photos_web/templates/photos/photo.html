@@ -3,12 +3,13 @@
 {% load static %}
 {% block content %}
 
-<div class="container">
-    <a href="{% url 'gallery'%}">Go back</a>
-    <img src="{{ photo.png_image.url }}">
+<div class="container_photo">
+<!--    <a href="{{ photo.png_image.url }}">-->
 
+    <img src="{{ photo.png_image.url }}">
     <p>{{ photo.description }}</p>
     <p>{{ photo.timestamp }}</p>
+    <a href="{% url 'gallery'%}">Go back</a>
 </div>
 
 
