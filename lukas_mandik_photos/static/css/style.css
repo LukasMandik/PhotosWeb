@@ -245,13 +245,15 @@ li.dropdown{
 
 
 .container{
-    /*display: flex;*/
+    display: flex;
 	flex-direction: column;
-    margin: 25% 0 0 0;
+    margin: 130px 0 0 0;
     text-align: center;
 	z-index: 10;
 }
-
+.categories {
+  margin: 15px 0;
+}
 
 .categories_item {
   display: inline-block;
@@ -422,9 +424,12 @@ li.dropdown{
 	}
 
 
-	.mySlides {
-	margin: 176px 0 0 0;
-}
+	.container, .mySlides {
+	margin: 11rem 0 0 0;
+	}
+
+
+
 
 @media (max-width: 728px) {
     .navbar .logo img{
@@ -575,9 +580,11 @@ li.dropdown{
 	width: 60%;
 	}
 
-		.mySlides {
+	.container, .mySlides {
 	margin: 100px 0 0 0;
 	}
+
+
 }
 }
 
