@@ -6,7 +6,7 @@
 <div class="slideshow-container">
     {% for photo in photos %}
     <div class="mySlides fade">
-        <img src="{{photo.image.url}}" style="width:100%">
+        <img src="{{photo.png_image.url}}" style="width:100%">
         <div class="text">{{ photo.name }}</div>
     </div>
     {% endfor %}
