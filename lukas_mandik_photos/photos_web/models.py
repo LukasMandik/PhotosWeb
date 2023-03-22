@@ -2,10 +2,19 @@ from django.db import models
 from PIL import Image, ExifTags, ImageStat
 from datetime import datetime
 import os
+from django.contrib.auth.models import User
+from django.urls import reverse
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=200, unique=True)
+    name = models.CharField(max_length=200, unique=True, db_index=True)
+    slug = models.SlugField(max_length=200, unique=True)
+
+    class Meta:
+        verbose_name_plural = 'categories'
+
+    def get_absolute_url(self):
+        return reverse('photos_web:category_list', args=[self.slug])
 
     def __str__(self):
         return self.name
@@ -13,6 +22,7 @@ class Category(models.Model):
 
 class Photo(models.Model):
     name = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=200)
     image = models.ImageField(blank=True, null=True,)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
     # webp_image = models.ImageField(upload_to='photos_web/static/photos', blank=True, null=True)
@@ -119,8 +129,11 @@ class Photo(models.Model):
 
         super(Photo, self).save(*args, **kwargs)
 
+    def get_absolute_url(self):
+        return reverse('photos_web:view_photo', args=[self.slug])
+
     def __str__(self):
-        return f"{self.name} {self.device} {self.timestamp}"
+        return f"{self.name} {self.image}"
 
 
     @staticmethod
@@ -132,6 +145,30 @@ class Photo(models.Model):
         return result
 
 
+class Product(models.Model):
+    name = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=200)
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='product_creator')
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
+    author = models.CharField(max_length=200, default='admin')
+    description = models.TextField(blank=True)
+    photo = models.ForeignKey(Photo, on_delete=models.SET_NULL, null=True, blank=True)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    stock = models.PositiveIntegerField(default=0)
+    in_stock = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=True)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name_plural = 'products'
+        ordering = ('-created',)
+
+    def get_absolute_url(self):
+        return reverse('photos_web:product_detail', args=[self.slug])
+
+    def __str__(self):
+        return self.name
 
 
 

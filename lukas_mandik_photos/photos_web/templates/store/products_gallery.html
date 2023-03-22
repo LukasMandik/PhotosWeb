@@ -1,31 +1,31 @@
 {% extends 'base.html' %}
+
 {% load static %}
 {% block content %}
-
     <div class="container">
         <div class="categories">
             <ul>
                 <div class="categories_item">
-                    <li {% if not selected_category %} class="selected"{% endif %}><a href="/gallery">All</a></li>
+                    <li{% if not selected_category %} class="selected"{% endif %}><a href="/store/products_gallery/">All</a></li>
                 </div>
                 {% for category in categories %}
                 <div class="categories_item">
-                    <li {% if category.name == selected_category %} class="selected"{% endif %}><a href="/gallery?category={{ category.name }}">{{ category.name }}</a></li>
+                    <li{% if category == selected_category %} class="selected"{% endif %}><a href="{{ category.get_absolute_url }}">{{ category.name }}</a></li>
                 </div>
                 {% endfor %}
              </ul>
         </div>
         <div class="container_grid">
-            {% for photo in photos %}
+            {% for product in products %}
             <div class="gallery-container">
                 <div class="gallery-item">
                     <div class="image">
-                        <a href="{{ photo.get_absolute_url }}">
-                            <img src="{{photo.png_image.url}}" alt="{{ photo.name }}">
-                        </a>
+                    <a href="{{ product.get_absolute_url }}">
+                        <img src="{{product.photo.png_image.url}}" alt="{{ product.name }}">
+                    </a>
                     </div>
                     <div class="gallery-text">
-                      <p>{{ photo.name }}</p>
+                      <p>{{ product.price }}</p>
                     </div>
                 </div>
             </div>
