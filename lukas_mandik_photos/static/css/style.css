@@ -45,6 +45,11 @@ body{
 	padding: 0 1rem;
 	opacity: 0.95;
 	z-index: 100;
+	transition: .5s ease-in-out;
+}
+.navbar.small {
+	background-color: transparent;
+  	height: 50px;
 }
 
 .navbar .inner_navbar{
@@ -60,11 +65,9 @@ body{
 }
 
 .navbar .logo a{
-	font-weight: 700;
-	font-size: 22px;
-	letter-spacing: 2px;
-	color: var(--primary-color1);
 }
+
+
 .navbar .logo img{
 	width: 12rem;
 	margin: 0 2rem;
@@ -147,7 +150,6 @@ li.dropdown{
 /* Slideshow container */
 .slideshow-container {
   /*max-width: 1000px;*/
-
   position: relative;
   margin: auto;
 }
@@ -260,7 +262,7 @@ li.dropdown{
   margin-bottom: 5px;
 }
 
-.categories_item li {
+.categories_item li{
 	opacity: 0.5;
 	display: flex;
 	align-items: center;
@@ -396,27 +398,80 @@ li.dropdown{
 }
 
 /*photo view*/
+.photo_menu{
+	display: flex;
+}
+
+.go_back {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 15px 5px;
+	background-color: #676767;
+	width: 100px;
+	height: 30px;
+	border-radius: 15px;
+	text-align: center;
+	/*outline: 2px solid red;*/
+}
+.go_back a {
+	color: #c9c9c9;
+	font-size: 11px;
+	letter-spacing: 1.2px;
+	text-transform: uppercase;
+	font-weight: 600;
+ }
+
 
 .container_photo{
 	display: flex;
 	flex-direction: column;
-	max-width: 800px;
-    margin: 25% auto;
-    text-align: center;
+	align-items: center;
+	max-width: 80%;
+    margin: 160px auto;
+    text-align: justify;
 	z-index: 10;
 }
+.text_title{
+	font-size: 23px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 600;
+	margin: 0 auto 10px auto;
+
+}
+.text_and_description{
+	display: flex;
+}
 .container_photo img{
-	max-width: 600px;
+	max-width: 400px;
 	max-height: 600px;
-    margin: 10px auto;
+    margin-right: 10px;
     text-align: center;
 	z-index: 10;
+	border-radius: 4px;
+}
+
+.image_photo{
+	/*display: flex;*/
+	/*display: block;*/
+	/*align-items: center;*/
+	/*outline: 2px solid red;*/
+}
+
+
+.description{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	width: auto;
+	margin: 0 10px 0 10px;
 }
 
 @media (max-width: 992px)
 {
 	.navbar{
-		height: 11rem;
+		height: 170px;
 		padding: 12px;
 	}
 
@@ -426,7 +481,7 @@ li.dropdown{
 
 
 	.container, .mySlides {
-	margin: 11rem 0 0 0;
+	margin: 170px 0 0 0;
 	}
 
 

@@ -1,8 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import random
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from .models import Photo, Category, Product
-
+from django.db.models import Q
 
 def hello_world(request):
     return HttpResponse("Hello world!")
@@ -35,14 +38,17 @@ def gallery(request):
     return render(request, 'photos/gallery.html', context)
 
 
+
+
+
 def all_products(request):
     category_name = request.GET.get('category', '')
     categories = Category.objects.all()
 
     if category_name:
-        products = Product.objects.filter(category__name=category_name).order_by('-id')
+        products = Product.objects.filter(is_active=True, category__name=category_name).order_by('-id')
     else:
-        products = Product.objects.all().order_by('-id')
+        products = Product.objects.filter(is_active=True).order_by('-id')
 
     context = {
         'categories': categories,
@@ -54,7 +60,13 @@ def all_products(request):
 
 def view_photo(request, photo_slug):
     photo = get_object_or_404(Photo, slug=photo_slug)
-    context = {'photo': photo}
+    previous_photo = Photo.objects.filter(id__lt=photo.id).order_by('-id').first()
+    next_photo = Photo.objects.filter(id__gt=photo.id).order_by('id').first()
+    context = {
+        'photo': photo,
+        'previous_photo': previous_photo,
+        'next_photo': next_photo,
+    }
     return render(request, 'photos/photo.html', context)
 
 
@@ -64,12 +76,9 @@ def product_detail(request, slug):
 
 
 def category_list(request, category_slug):
-    # category_name = request.GET.get('category', '')
-    categories = Category.objects.all()
     category = get_object_or_404(Category, slug=category_slug)
-
-    products = Product.objects.filter(category=category)
-
+    products = Product.objects.filter(category=category, is_active=True)
+    categories = Category.objects.all()
     context = {
         'category': category,
         'products': products,

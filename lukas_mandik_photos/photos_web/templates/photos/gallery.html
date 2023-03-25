@@ -18,7 +18,7 @@
         <div class="container_grid">
             {% for photo in photos %}
             <div class="gallery-container">
-                <div class="gallery-item">
+                <div class="gallery-item {% if photo.width > photo.height %}wide{% elif photo.width < photo.height %}tall{% endif %}">
                     <div class="image">
                         <a href="{{ photo.get_absolute_url }}">
                             <img src="{{photo.png_image.url}}" alt="{{ photo.name }}">
@@ -34,5 +34,9 @@
             {% endfor %}
         </div>
     </div>
+
+<script>
+
+</script>
 
 {% endblock %}

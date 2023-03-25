@@ -23,7 +23,7 @@ class PhotoAdmin(admin.ModelAdmin):
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['name', 'author', 'category', 'slug', 'photo',
-                    'price', 'in_stock', 'created', 'updated']
+                    'price', 'is_active', 'in_stock', 'created', 'updated']
     list_filter = ['in_stock', 'is_active']
-    list_editable = ['price', 'in_stock']
+    list_editable = ['price', 'in_stock', 'is_active']
     prepopulated_fields = {'slug': ('name',)}
