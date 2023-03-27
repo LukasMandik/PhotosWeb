@@ -11,8 +11,11 @@
     <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 </head>
 <body>
-{% include 'navbar.html' %}
-{% block content %} {% endblock %}
+{% block main %}
+    {% include 'navbar.html' %}
+    {% block content %}
+    {% endblock %}
+{% endblock %}
 <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

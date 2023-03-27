@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}Photo{% endblock %}
 {% load static %}
+{% block main %}
 {% block content %}
 
 <div class="container_photo">
@@ -44,4 +45,5 @@
     <p>{{ photo.gps_coordinates }}</p>
 </div>
 
+{% endblock %}
 {% endblock %}
