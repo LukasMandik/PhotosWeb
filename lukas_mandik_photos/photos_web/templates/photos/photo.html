@@ -7,7 +7,6 @@
 <div class="container_photo">
 <!--    <a href="{{ photo.png_image.url }}">-->
     <div class="photo_menu">
-
         <div class="go_back">
         {% if next_photo %}
             <a href="{% url 'photos_web:view_photo' next_photo.slug %}">&larr; Previous</a>
@@ -30,7 +29,8 @@
     </div>
 
 
-    <div class="text_and_description">
+
+
         <div class="image_photo">
             <img src="{{ photo.png_image.url }}">
         </div>
@@ -40,7 +40,6 @@
 <!--            </div>-->
 <!--            <p>{{ photo.description }}</p>-->
 <!--        </div>-->
-    </div>
 
     <p>{{ photo.gps_coordinates }}</p>
 </div>
