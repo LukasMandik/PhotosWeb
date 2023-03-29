@@ -69,25 +69,25 @@ def gallery(request):
     else:
         photos = Photo.objects.all().order_by('-id')
 
-    if request.method == 'POST':
-        form = LikePhotoForm(request.POST)
-        if form.is_valid() and request.user.is_authenticated:
-            photo = form.cleaned_data.get('photo_id')
-            if request.user in photo.user_likes.all():
-                photo.user_likes.remove(request.user)
-                photo.likes -= 1
-            else:
-                photo.user_likes.add(request.user)
-                photo.likes += 1
-            photo.save()
-            return redirect('/gallery', category=category_name)
+    # if request.method == 'POST':
+    #     form = LikePhotoForm(request.POST)
+    #     if form.is_valid() and request.user.is_authenticated:
+    #         photo = form.cleaned_data.get('photo_id')
+    #         if request.user in photo.user_likes.all():
+    #             photo.user_likes.remove(request.user)
+    #             photo.likes -= 1
+    #         else:
+    #             photo.user_likes.add(request.user)
+    #             photo.likes += 1
+    #         photo.save()
+    #         return redirect('/gallery', category=category_name)
 
-    form = LikePhotoForm()
+    # form = LikePhotoForm()
     context = {
         'categories': categories,
         'photos': photos,
         'selected_category': category_name,
-        'like_photo_form': form,
+        # 'like_photo_form': form,
     }
     return render(request, 'photos/gallery.html', context)
 
@@ -145,14 +145,78 @@ def category_list(request, category_slug):
     return render(request, 'store/products_gallery.html', context)
 
 
-@login_required
-def like_photo(request, pk):
-    photo = get_object_or_404(Photo, pk=pk)
-    user = request.user
+# from django.http import JsonResponse
+# from django.shortcuts import get_object_or_404
+# from django.views.decorators.csrf import csrf_exempt
+#
+# from .models import Photo
 
-    if user in photo.likes.all():
-        photo.likes.remove(user)
+
+# @csrf_exempt
+# def like_photo(request):
+#     if request.method == 'POST':
+#         photo_id = request.POST.get('photo_id')
+#         photo = get_object_or_404(Photo, id=photo_id)
+#         photo.likes += 1
+#         photo.save()
+#         return JsonResponse({'likes': photo.likes})
+
+from django.http import JsonResponse
+from django.shortcuts import get_object_or_404
+from django.contrib.auth.decorators import login_required
+
+from .models import Photo
+
+
+def like_photo(request):
+    photo_id = request.POST.get('photo_id')
+    photo = get_object_or_404(Photo, id=photo_id)
+
+    # Check if user is authenticated
+    if request.user.is_authenticated:
+        if request.user in photo.user_likes.all():
+            # Remove user from user_likes and decrement likes
+            photo.user_likes.remove(request.user)
+            photo.likes -= 1
+            liked = False
+        else:
+            # Add user to user_likes and increment likes
+            photo.user_likes.add(request.user)
+            photo.likes += 1
+            liked = True
+
+        photo.save()
+
+        return JsonResponse({'likes': photo.likes, 'liked': liked})
+
+    # If user is not authenticated, use cookies
     else:
-        photo.likes.add(user)
+        liked_photos = request.COOKIES.get('liked_photos')
+        if liked_photos:
+            liked_photos = liked_photos.split(',')
+        else:
+            liked_photos = []
 
-    return redirect('photos_web:view_photo', slug=photo.slug)
+        if photo_id not in liked_photos:
+            # Add photo_id to liked_photos
+            liked_photos.append(photo_id)
+            # Increment likes
+            photo.likes += 1
+            photo.save()
+
+            # Set cookie
+            response = JsonResponse({'likes': photo.likes, 'liked': True})
+            response.set_cookie('liked_photos', ','.join(liked_photos))
+
+        else:
+            # Remove photo_id from liked_photos
+            liked_photos.remove(photo_id)
+            # Decrement likes
+            photo.likes -= 1
+            photo.save()
+
+            # Set cookie
+            response = JsonResponse({'likes': photo.likes, 'liked': False})
+            response.set_cookie('liked_photos', ','.join(liked_photos), max_age=31536000)
+
+        return response

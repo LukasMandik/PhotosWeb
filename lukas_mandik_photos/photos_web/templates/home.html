@@ -15,8 +15,6 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
-
-
 <!--    <div class="mySlides fade">-->
 <!--        <img src="../static/media/_DSC3824.JPG" style="width:100%">-->
 <!--        <div class="text">Caption Two</div>-->
@@ -29,12 +27,26 @@
     <a class="prev" onclick="plusSlides(-1)">❮</a>
     <a class="next" onclick="plusSlides(1)">❯</a>
 </div>
+<div class="home_container">
+        {% if request.user.is_authenticated %}
+        <!--    {{ request.user.username }}-->
+        <div class="title_home_container"><h2 >Welcome to my website!</h2></div>
 
-{% if request.user.is_authenticated %}
-    <p>Welcome, {{ request.user.username }}!</p>
-{% else %}
-    <p>You are not logged in.</p>
-{% endif %}
+        <div class="item_home_container">
+            <p>Here you can explore the beauty of nature through my lens. My photos capture stunning landscapes, breathtaking mountain ranges, and serene bodies of water. From majestic sunsets to vibrant autumn foliage, every photo tells a unique story.</p>
+            <p>I have taken these photos on various hikes, expeditions, and camping trips across different mountain ranges. I love to spend time in the wilderness and capture the beauty of nature around me.</p>
+            <p>Take a moment to browse through my gallery and discover the wonder and tranquility of the great outdoors.</p>
+
+
+        </div>
+        {% else %}
+        <div class="item_home_container">
+            <p>You are not logged in.</p>
+            <p>The beauty of nature captured through the lens. Explore stunning landscapes, breathtaking mountain ranges, and serene bodies of water. From majestic sunsets to vibrant autumn foliage, every photo tells a story. Discover the wonder and tranquility of the great outdoors.</p>
+        </div>
+        {% endif %}
+</div>
+<div class="home_gallery_item">{% include 'photos/gallery.html' %}</div>
 
 <script>
 let slideIndex = 1;

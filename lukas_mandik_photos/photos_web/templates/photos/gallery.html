@@ -16,35 +16,64 @@
              </ul>
         </div>
         <div class="container_grid">
-    {% for photo in photos %}
-    <div class="gallery-container">
-        <div class="gallery-item {% if photo.width > photo.height %}wide{% elif photo.width < photo.height %}tall{% endif %}">
-            <div class="image">
-                <a href="{{ photo.get_absolute_url }}">
-                    <img src="{{photo.png_image.url}}" alt="{{ photo.name }}">
-                </a>
-            </div>
-            <div class="gallery-text">
-                <form method="post" action="{% url 'photos_web:gallery' %}">
-                    {% csrf_token %}
-                    {{ like_photo_form.photo_id }}
-                    <input type="hidden" name="photo_id" value="{{ photo.id }}">
-                    <button type="submit" class="heart"><p>{{ photo.likes }} x</p><i class="fas fa-heart"></i></button>
-                </form>
-                <div><p>{{ photo.category }}</p></div>
-                <div><i class="fas fa-share-alt"></i></div>
+        {% for photo in photos %}
+        <div class="gallery-container">
+            <div class="gallery-item {% if photo.width > photo.height %}wide{% elif photo.width < photo.height %}tall{% endif %}">
+                <div class="image">
+                    <a href="{{ photo.get_absolute_url }}">
+                        <img src="{{photo.png_image.url}}" alt="{{ photo.name }}">
+                    </a>
+                </div>
+                <div class="gallery-text">
+                    <div><i class="fas fa-share-alt"></i></div>
+                    <div><p>{{ photo.category }}</p></div>
+                    <button class="like-button" onclick="likePhoto({{ photo.id }});">
+                    <span id="like-count-{{ photo.id }}">{{ photo.likes }}</span> x
+                    <i class="fas fa-heart"></i>
+                    </button>
+                </div>
             </div>
         </div>
+        {% empty %}
+        <p>empty</p>
+        {% endfor %}
     </div>
-    {% empty %}
-    <p>empty</p>
-    {% endfor %}
 </div>
 
-    </div>
-
+<script src="{% static 'js/jquery.min.js' %}"></script>
 <script>
+function likePhoto(photo_id) {
+  var url = '/like_photo/';
+  var data = {
+    'photo_id': photo_id,
+    'csrfmiddlewaretoken': '{{ csrf_token }}'
+  };
+
+  // Disable the button for 2 seconds
+  $('.like-button').prop('disabled', true);
+  setTimeout(function() {
+    $('.like-button').prop('disabled', false);
+  }, 2000);
+
+  // Send the request to the server
+  $.post(url, data, function(response) {
+    $('#like-count-' + photo_id).html(response.likes);
+  });
+}
 
 </script>
+
+
+<!--<script>-->
+<!--    const likeButtons = document.querySelectorAll('.like-button');-->
+
+<!--likeButtons.forEach((button) => {-->
+<!--  button.addEventListener('click', () => {-->
+<!--    const heartIcon = button.querySelector('i.fa-heart');-->
+<!--    const isLiked = heartIcon.classList.contains('liked');-->
+<!--    heartIcon.classList.toggle('liked', !isLiked);-->
+<!--  });-->
+<!--});-->
+<!--</script>-->
 
 {% endblock %}
