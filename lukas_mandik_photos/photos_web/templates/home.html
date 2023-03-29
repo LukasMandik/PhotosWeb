@@ -15,6 +15,8 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
+
+
 <!--    <div class="mySlides fade">-->
 <!--        <img src="../static/media/_DSC3824.JPG" style="width:100%">-->
 <!--        <div class="text">Caption Two</div>-->
@@ -28,7 +30,11 @@
     <a class="next" onclick="plusSlides(1)">❯</a>
 </div>
 
-
+{% if request.user.is_authenticated %}
+    <p>Welcome, {{ request.user.username }}!</p>
+{% else %}
+    <p>You are not logged in.</p>
+{% endif %}
 
 <script>
 let slideIndex = 1;

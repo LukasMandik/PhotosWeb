@@ -5,7 +5,7 @@ from .models import Photo, Category, Product
 
 
 # Register your models here.
-# admin.site.register(models.Photo)
+# admin.site.register(models.UserProfile)
 # admin.site.register(models.Category)
 @admin.register(Category)
 class CateroryAdmin(admin.ModelAdmin):

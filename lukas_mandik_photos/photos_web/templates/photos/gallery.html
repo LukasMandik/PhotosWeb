@@ -16,23 +16,31 @@
              </ul>
         </div>
         <div class="container_grid">
-            {% for photo in photos %}
-            <div class="gallery-container">
-                <div class="gallery-item {% if photo.width > photo.height %}wide{% elif photo.width < photo.height %}tall{% endif %}">
-                    <div class="image">
-                        <a href="{{ photo.get_absolute_url }}">
-                            <img src="{{photo.png_image.url}}" alt="{{ photo.name }}">
-                        </a>
-                    </div>
-                    <div class="gallery-text">
-                      <p>{{ photo.category }}</p>
-                    </div>
-                </div>
+    {% for photo in photos %}
+    <div class="gallery-container">
+        <div class="gallery-item {% if photo.width > photo.height %}wide{% elif photo.width < photo.height %}tall{% endif %}">
+            <div class="image">
+                <a href="{{ photo.get_absolute_url }}">
+                    <img src="{{photo.png_image.url}}" alt="{{ photo.name }}">
+                </a>
             </div>
-            {% empty %}
-            <p>empty</p>
-            {% endfor %}
+            <div class="gallery-text">
+                <form method="post" action="{% url 'photos_web:gallery' %}">
+                    {% csrf_token %}
+                    {{ like_photo_form.photo_id }}
+                    <input type="hidden" name="photo_id" value="{{ photo.id }}">
+                    <button type="submit" class="heart"><p>{{ photo.likes }} x</p><i class="fas fa-heart"></i></button>
+                </form>
+                <div><p>{{ photo.category }}</p></div>
+                <div><i class="fas fa-share-alt"></i></div>
+            </div>
         </div>
+    </div>
+    {% empty %}
+    <p>empty</p>
+    {% endfor %}
+</div>
+
     </div>
 
 <script>
