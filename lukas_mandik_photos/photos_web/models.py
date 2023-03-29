@@ -3,6 +3,7 @@ from PIL import Image, ExifTags, ImageStat
 from datetime import datetime
 import os
 from django.contrib.auth.models import User
+from django.forms import IntegerField
 from django.urls import reverse
 
 
@@ -45,6 +46,10 @@ class Photo(models.Model):
     std_dev = models.CharField(max_length=100, blank=True, null=True)
     brightness = models.CharField(max_length=100, blank=True, null=True)
 
+    likes = models.IntegerField(null=True)
+    user_likes = models.ManyToManyField(User, related_name='liked_photos', blank=True, default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     def save(self, *args, **kwargs):
 
         if self.image and not self.image_name:
