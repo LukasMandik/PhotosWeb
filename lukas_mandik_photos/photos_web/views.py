@@ -37,7 +37,10 @@ def home(request):
 
         random_ids = random.sample([p.id for p in photos], min(len(photos), 3))
         photos = Photo.objects.filter(id__in=random_ids)
-    context = {'photos': photos}
+
+    home_photo = Photo.objects.filter(image_name="_DSC5009.jpg").first
+    context = {'photos': photos,
+               'home_photo': home_photo}
     return render(request, 'home.html', context)
 
 

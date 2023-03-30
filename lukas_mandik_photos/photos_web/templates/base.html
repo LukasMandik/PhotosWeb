@@ -12,26 +12,14 @@
 </head>
 <body>
 {% block main %}
-    {% include 'navbar.html' %}
+<div id="loading-screen" class="loading-screen">
+    <div class="loading-text">Loading...</div>
+</div>
+<script src="{% static 'js/loading.js' %}"></script>
+{% include 'navbar.html' %}
     {% block content %}
     {% endblock %}
 {% endblock %}
 <script src="{% static 'js/script.js' %}"></script>
-<script id="__bs_script__">//<![CDATA[
-  (function() {
-    try {
-      var script = document.createElement('script');
-      if ('async') {
-        script.async = true;
-      }
-      script.src = 'http://HOST:3000/browser-sync/browser-sync-client.js?v=2.29.1'.replace("HOST", location.hostname);
-      if (document.body) {
-        document.body.appendChild(script);
-      }
-    } catch (e) {
-      console.error("Browsersync: could not append script tag", e);
-    }
-  })()
-//]]></script>
 </body>
 </html>
