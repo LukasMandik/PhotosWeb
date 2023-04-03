@@ -31,6 +31,8 @@ LOGIN_REDIRECT_URL = '/'
 
 LIKED_PHOTOS_COOKIE_MAX_AGE = 31536000
 
+USE_TZ = True
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

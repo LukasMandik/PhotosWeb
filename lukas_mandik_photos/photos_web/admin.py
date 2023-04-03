@@ -14,9 +14,9 @@ class CateroryAdmin(admin.ModelAdmin):
 
 @admin.register(Photo)
 class PhotoAdmin(admin.ModelAdmin):
-    list_display = ['name', 'image', 'likes', 'category', 'timestamp',]
+    list_display = ['name', 'image', 'category']
     list_filter = []
-    list_editable = ['category', 'likes',]
+    list_editable = ['category']
     prepopulated_fields = {'slug': ('name',)}
 
 

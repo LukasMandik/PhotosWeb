@@ -8,11 +8,11 @@
 <!--    <a href="{{ photo.png_image.url }}">-->
     <div class="photo_menu">
         <div class="go_back">
-        {% if next_photo %}
-            <a href="{% url 'photos_web:view_photo' next_photo.slug %}">&larr; Previous</a>
-        {% else %}
-            <a href="">&larr; Previous</a>
-        {% endif %}
+            {% if next_photo %}
+                <a id="prev-photo" href="{% url 'photos_web:view_photo' next_photo.slug %}">&larr; Previous</a>
+            {% else %}
+                <a id="prev-photo" href="">&larr; Previous</a>
+            {% endif %}
         </div>
 
         <div class="go_back">
@@ -20,29 +20,114 @@
         </div>
 
         <div class="go_back">
-        {% if previous_photo %}
-            <a href="{% url 'photos_web:view_photo' previous_photo.slug %}">Next &rarr;</a>
-        {% else %}
-            <a href="">Next &rarr;</a>
-        {% endif %}
+            {% if previous_photo %}
+                <a id="next-photo" href="{% url 'photos_web:view_photo' previous_photo.slug %}">Next &rarr;</a>
+            {% else %}
+                <a id="next-photo" href="">Next &rarr;</a>
+            {% endif %}
         </div>
     </div>
 
 
 
 
-        <div class="image_photo">
-            <img src="{{ photo.png_image.url }}">
+    <div class="image_photo">
+        <img src="{{ photo.png_image.url }}">
+    </div>
+    <div class="description">
+        <div class="text_title">
+            <p>{{ photo.name }}</p>
         </div>
-<!--        <div class="description">-->
-<!--            <div class="text_title">-->
-<!--                 <p>{{ photo.name }}</p>-->
-<!--            </div>-->
-<!--            <p>{{ photo.description }}</p>-->
-<!--        </div>-->
+            <p>{{ photo.timestamp }}</p>
+            <p>{{ photo.created_at }}</p>
+            <p>{{ photo.updated_at }}</p>
+        </div>
 
     <p>{{ photo.gps_coordinates }}</p>
 </div>
+
+
+<!--<script>-->
+<!--  const photoImage = document.querySelector(".container_photo img");-->
+
+<!--  // Add the zoom-in class to the photo when the page loads-->
+<!--  photoImage.classList.add("zoom-in");-->
+
+<!--  // Remove the zoom-in class after a short delay-->
+<!--  setTimeout(() => {-->
+<!--    photoImage.classList.remove("zoom-in");-->
+<!--  }, 100);-->
+<!--</script>-->
+
+<script>
+  const prevPhotoLink = document.getElementById("prev-photo");
+  const nextPhotoLink = document.getElementById("next-photo");
+  const photoImage = document.querySelector(".image_photo img");
+
+  prevPhotoLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    photoImage.classList.add("slide-left");
+    setTimeout(() => {
+      window.location.href = prevPhotoLink.href;
+    }, 500);
+  });
+
+  nextPhotoLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    photoImage.classList.add("slide-right");
+    setTimeout(() => {
+      window.location.href = nextPhotoLink.href;
+    }, 500);
+  });
+</script>
+
+
+
+
+<!--<script>-->
+<!--  const photoImage = document.querySelector(".container_photo img");-->
+
+<!--  function animateZoomIn() {-->
+<!--    // Add the zoom-in class to the photo-->
+<!--    photoImage.classList.add("zoom-in");-->
+
+<!--    // Remove the zoom-in class after a short delay-->
+<!--    setTimeout(() => {-->
+<!--      photoImage.classList.remove("zoom-in");-->
+<!--    }, 500); // Zvýšte časový limit, ak je potrebné-->
+<!--  }-->
+
+<!--  // Spustite animáciu zoomu po úplnom načítaní obrazu-->
+<!--  photoImage.onload = function () {-->
+<!--    animateZoomIn();-->
+<!--  };-->
+
+<!--  // Spustite animáciu zoomu po úplnom načítaní stránky (ak už bolo načítané predtým)-->
+<!--  window.onload = function () {-->
+<!--    animateZoomIn();-->
+<!--  };-->
+
+<!--  const prevPhotoLink = document.getElementById("prev-photo");-->
+<!--  const nextPhotoLink = document.getElementById("next-photo");-->
+
+<!--  prevPhotoLink.addEventListener("click", (event) => {-->
+<!--    event.preventDefault();-->
+<!--    photoImage.classList.add("slide-left");-->
+<!--    setTimeout(() => {-->
+<!--      window.location.href = prevPhotoLink.href;-->
+<!--    }, 500);-->
+<!--  });-->
+
+<!--  nextPhotoLink.addEventListener("click", (event) => {-->
+<!--    event.preventDefault();-->
+<!--    photoImage.classList.add("slide-right");-->
+<!--    setTimeout(() => {-->
+<!--      window.location.href = nextPhotoLink.href;-->
+<!--    }, 500);-->
+<!--  });-->
+<!--</script>-->
+
+
 
 {% endblock %}
 {% endblock %}

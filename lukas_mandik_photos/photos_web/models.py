@@ -2,6 +2,7 @@ from django.db import models
 from PIL import Image, ExifTags, ImageStat
 from datetime import datetime
 import os
+from django.utils.timezone import make_aware
 from django.contrib.auth.models import User
 from django.forms import IntegerField
 from django.urls import reverse
@@ -23,7 +24,7 @@ class Category(models.Model):
 
 class Photo(models.Model):
     name = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=200)
+    slug = models.SlugField(max_length=200, unique=True)
     image = models.ImageField(blank=True, null=True,)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
     # webp_image = models.ImageField(upload_to='photos_web/static/photos', blank=True, null=True)
@@ -46,8 +47,8 @@ class Photo(models.Model):
     std_dev = models.CharField(max_length=100, blank=True, null=True)
     brightness = models.CharField(max_length=100, blank=True, null=True)
 
-    likes = models.IntegerField(null=True)
-    user_likes = models.ManyToManyField(User, related_name='liked_photos', blank=True, default=0)
+    likes = models.PositiveIntegerField(default=0)
+    user_likes = models.ManyToManyField(User, related_name='liked_photos', blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     def save(self, *args, **kwargs):
@@ -76,7 +77,9 @@ class Photo(models.Model):
                     if "DateTimeOriginal" in exif_data:
                         date_time_str = exif_data["DateTimeOriginal"]
                         date_time_obj = datetime.strptime(date_time_str, "%Y:%m:%d %H:%M:%S")
-                        self.timestamp = date_time_obj
+                        aware_datetime = make_aware(
+                            date_time_obj)  # Konverzia na dátum a čas s informáciami o časovej zóne
+                        self.timestamp = aware_datetime
 
                     # Save device
                     if "Model" in exif_data and "Make" in exif_data:
@@ -152,7 +155,7 @@ class Photo(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=200)
+    slug = models.SlugField(max_length=200, unique=True)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='product_creator')
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
     author = models.CharField(max_length=200, default='admin')

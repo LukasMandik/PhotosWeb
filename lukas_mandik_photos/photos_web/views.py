@@ -5,11 +5,11 @@ import random
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Photo, Category, Product
-from django.db.models import Q
+from django.db.models import Q, Count
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 
 
 def register(request):
@@ -27,20 +27,27 @@ def register(request):
     return render(request, 'registration/register.html', {'form': form})
 
 
+def user_logout(request):
+    logout(request)
+    return redirect('/')
+
+
 def hello_world(request):
     return HttpResponse("Hello world!")
 
 
 def home(request):
     photos = Photo.objects.all()
-    if photos:
+    top_likes_photos = Photo.objects.annotate(like_count=Count('likes')).order_by('-likes')[:3]
 
+    if photos:
         random_ids = random.sample([p.id for p in photos], min(len(photos), 3))
         photos = Photo.objects.filter(id__in=random_ids)
 
     home_photo = Photo.objects.filter(image_name="_DSC5009.jpg").first
     context = {'photos': photos,
-               'home_photo': home_photo}
+               'home_photo': home_photo,
+               'top_likes_photos': top_likes_photos}
     return render(request, 'home.html', context)
 
 

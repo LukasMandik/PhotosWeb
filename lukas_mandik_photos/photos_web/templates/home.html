@@ -2,13 +2,14 @@
 {% load static %}
 {% block title %}HOME{% endblock %}
 <div id="loading-screen" class="loading-screen">
-<div class="loading-text">Loading...</div>
+    <div class="loading-text">Loading...</div>
 </div>
 <script src="{% static 'js/loading.js' %}"></script>
-{% block main %}
+
 {% block content %}
 
 <div class="main_home_container">
+
     <div class="slideshow-container">
         {% for photo in photos %}
         <div class="mySlides fade">
@@ -21,53 +22,76 @@
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-    <!--    <div class="mySlides fade">-->
-    <!--        <img src="../static/media/_DSC3824.JPG" style="width:100%">-->
-    <!--        <div class="text">Caption Two</div>-->
-    <!--    </div>-->
-
-    <!--    <div class="mySlides fade">-->
-    <!--        <img src="../static/media/_DSC3827.JPG" style="width:100%">-->
-    <!--        <div class="text">Caption Three</div>-->
-    <!--    </div>-->
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
     </div>
-    <div class="home_container">
-            {% if request.user.is_authenticated %}
-            <!--    {{ request.user.username }}-->
 
+    <div class="home_container">
+        {% if request.user.is_authenticated %}
             <div class="left_home_container">
-                <div class="title_home_container">
-                    <h2>Hello, {{ request.user.username }} !</h2></div>
+                <div class="title_home_container"><h2>Welcome on page!</h2></div>
                 <div class="item_home_container">
-                    <p>Here you can explore the beauty of nature through my lens. My photos capture stunning landscapes, breathtaking mountain ranges, and serene bodies of water. From majestic sunsets to vibrant autumn foliage, every photo tells a unique story.</p>
+                    <p>{{ request.user.username }}, here you can explore the beauty of nature through my lens. My photos capture stunning landscapes, breathtaking mountain ranges, and serene bodies of water. From majestic sunsets to vibrant autumn foliage, every photo tells a unique story.</p>
                     <p>I have taken these photos on various hikes, expeditions, and camping trips across different mountain ranges. I love to spend time in the wilderness and capture the beauty of nature around me.</p>
                     <p>Take a moment to browse through my gallery and discover the wonder and tranquility of the great outdoors.</p>
                 </div>
             </div>
+        <div>
             <div class="right_home_container hidden">
-                <div class="title_home_container">
-                    <h2>About me</h2>
-                </div>
-                    <img src="{{ home_photo.image.url }}" alt="{{ home_photo.name }}">
+                <div class="title_home_container"><h2>About me</h2></div>
+                <img src="{{ home_photo.image.url }}" alt="{{ home_photo.name }}">
                 <div class="item_home_container">
                     <p>Here you can explore the beauty of nature through my lens. My photos capture stunning landscapes, breathtaking mountain ranges, and serene bodies of water. From majestic sunsets to vibrant autumn foliage, every photo tells a unique story.</p>
                     <p>I have taken these photos on various hikes, expeditions, and camping trips across different mountain ranges. I love to spend time in the wilderness and capture the beauty of nature around me.</p>
                     <p>Take a moment to browse through my gallery and discover the wonder and tranquility of the great outdoors.</p>
                 </div>
             </div>
-                {% else %}
+
+            <div class="down_home_container hidden2">
+                <div class="title_home_container">
+                    <h2>Top liked</h2>
+                </div>
+                {% for photo in top_likes_photos %}
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <div class="image">
+                            <a href="{{ photo.get_absolute_url }}">
+                                <img src="{{photo.png_image.url}}" alt="{{ photo.name }}">
+                            </a>
+                        </div>
+                        <div class="gallery-text">
+                            <div><i class="fas fa-share-alt"></i></div>
+                            <div><p>{{ photo.category }}</p></div>
+                            <button class="like-button" onclick="likePhoto({{ photo.id }});">
+                            <span id="like-count-{{ photo.id }}">{{ photo.likes }}</span> x
+                            <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <p>empty</p>
+                {% endfor %}
+
+            {% else %}
                 <div class="item_home_container">
                     <p>You are not logged in.</p>
                     <p>The beauty of nature captured through the lens. Explore stunning landscapes, breathtaking mountain ranges, and serene bodies of water. From majestic sunsets to vibrant autumn foliage, every photo tells a story. Discover the wonder and tranquility of the great outdoors.</p>
                 </div>
             {% endif %}
+        </div>
     </div>
-    <div class="home_gallery_item">{% include 'photos/gallery.html' %}</div>
+
 </div>
 
-
+<!--    <style>-->
+<!--        .left_home_container {-->
+<!--            background-image: url('{% static "images/_DSC9014.JPG" %}');-->
+<!--            background-size: cover;-->
+<!--            background-position: top;-->
+<!--            background-repeat: no-repeat;-->
+<!--        }-->
+<!--    </style>-->
 
 
 
@@ -75,13 +99,20 @@
   document.addEventListener('scroll', function () {
     const leftContainer = document.querySelector('.left_home_container');
     const rightContainer = document.querySelector('.right_home_container');
+    const downContainer = document.querySelector('.down_home_container');
     const leftContainerRect = leftContainer.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    if (leftContainerRect.bottom <= windowHeight - 200) {
+    if (leftContainerRect.bottom <= windowHeight - 180) {
       rightContainer.classList.remove('hidden');
     } else {
       rightContainer.classList.add('hidden');
+    }
+
+        if (leftContainerRect.bottom <= windowHeight - 400) {
+      downContainer.classList.remove('hidden2');
+    } else {
+      downContainer.classList.add('hidden2');
     }
   });
 </script>
@@ -136,5 +167,4 @@ let autoSlidesInterval = setInterval(autoSlides, 5000); // Zmena fotiek každé 
 </script>
 
 
-{% endblock %}
 {% endblock %}

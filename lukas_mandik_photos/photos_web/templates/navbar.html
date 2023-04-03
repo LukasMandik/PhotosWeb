@@ -12,6 +12,9 @@
                     <li><a href="">Contact</a></li>
                     <li><a href="/store/products_gallery/">Store</a></li>
                     <li><a href="/login">Login</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="/logout">Odhlásiť sa</a></li>
+                    {% endif %}
                 </ul>
             </div>
             <div class="hamburger">
