@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-import os
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ei&1mf4l=t+ioj24gzd&&ch1&dz#h4h)qhs6v)o!ejt@2zdi4x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "lvh.me"]
 
 LOGIN_REDIRECT_URL = '/'
 
@@ -40,9 +40,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+
     'photos_web',
+
     'livereload',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -85,6 +95,15 @@ DATABASES = {
     }
 }
 
+AUTHENTICATION_BACKENDS = [
+
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -137,3 +156,11 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 EXIFTOOL_PATH = '/usr/local/bin/exiftool'  # cesta k exiftoolu na vašom počítači
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# Pre Django Allauth
+
+LOGIN_REDIRECT_URL = '/'  # Zmeňte toto na URL, na ktorú chcete presmerovať používateľov po prihlásení
+ACCOUNT_EMAIL_VERIFICATION = 'none'  # Nastavte toto na 'none', ak nechcete overenie e-mailu
+

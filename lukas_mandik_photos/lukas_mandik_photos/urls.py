@@ -22,6 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # photo_web app
     path('', include('photos_web.urls')),
+    # Add this line
+    path('accounts/', include('allauth.urls')),
 ]
 
 if settings.DEBUG:

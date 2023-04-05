@@ -36,7 +36,7 @@
                     <p>Take a moment to browse through my gallery and discover the wonder and tranquility of the great outdoors.</p>
                 </div>
             </div>
-        <div>
+        <div class="duble_container">
             <div class="right_home_container hidden">
                 <div class="title_home_container"><h2>About me</h2></div>
                 <img src="{{ home_photo.image.url }}" alt="{{ home_photo.name }}">
@@ -72,7 +72,7 @@
                 {% empty %}
                 <p>empty</p>
                 {% endfor %}
-
+            </div>
             {% else %}
                 <div class="item_home_container">
                     <p>You are not logged in.</p>

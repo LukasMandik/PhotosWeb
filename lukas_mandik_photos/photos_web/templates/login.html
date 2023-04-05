@@ -1,14 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Login</h2>
-    <h2>Login</h2>
-    <h2>Login</h2>
-    <h2>Login</h2>
-    <h2>Login</h2>
-    <h2>Login</h2>
-    <h2>Login</h2>
-    <h2>Login</h2>
+<div class="main_container">
     <h2>Login</h2>
     <form method="post">
         {% csrf_token %}
@@ -16,4 +9,14 @@
         <button type="submit">Login</button>
     </form>
     <a href="/register">register</a>
+    {% load socialaccount %}
+<div class="social-login">
+    <h3>or</h3>
+
+            <a href="{% provider_login_url 'google'%}?next=/">login with google</a>
+
+    </ul>
+</div>
+
+</div>
 {% endblock %}

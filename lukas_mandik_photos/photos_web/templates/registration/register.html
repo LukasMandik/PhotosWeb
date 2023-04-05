@@ -1,20 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="main_container">
+    <h2>Register</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
+{% load socialaccount %}
+{% providers_media_js %}
+<div class="social-login">
+    <h3>Prihlásiť sa cez:</h3>
+    <ul>
+        {% for provider in socialaccount.providers %}
+        <li>
+            <a href="{% provider_login_url provider.id process='login' %}">
+                {{ provider.name }}hhhhhh
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
 
-<h2>Register</h2>
-<h2>Register</h2>
-<h2>Register</h2>
-<h2>Register</h2>
-<h2>Register</h2>
-<h2>Register</h2>
-<h2>Register</h2>
-<h2>Register</h2>
-<h2>Register</h2>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Register</button>
-</form>
+Dostupní poskytovatelia: {{ socialaccount.providers }}
+</div>
 
 {% endblock %}
