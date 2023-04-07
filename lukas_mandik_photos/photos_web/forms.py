@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 
 
 class UserCreationWithEmailForm(UserCreationForm):
-    email = forms.EmailField(required=True, help_text="Required. Enter a valid email address.")
+    email = forms.EmailField(required=True, help_text="")
 
     class Meta:
         model = User

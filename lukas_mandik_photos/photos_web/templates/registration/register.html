@@ -8,22 +8,7 @@
         {{ form.as_p }}
         <button type="submit">Register</button>
     </form>
-{% load socialaccount %}
-{% providers_media_js %}
-<div class="social-login">
-    <h3>Prihlásiť sa cez:</h3>
-    <ul>
-        {% for provider in socialaccount.providers %}
-        <li>
-            <a href="{% provider_login_url provider.id process='login' %}">
-                {{ provider.name }}hhhhhh
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
 </div>
 
-Dostupní poskytovatelia: {{ socialaccount.providers }}
-</div>
 
 {% endblock %}

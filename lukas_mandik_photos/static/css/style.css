@@ -315,13 +315,89 @@ li.dropdown{
 
 
 .main_container{
-    display: block;
     align-items: center;
     margin: 30% auto;
     text-align: center;
 	opacity: 0.85;
 	z-index: 10;
 }
+
+.social-login, .main_container button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #a80000;
+	width: 140px;
+	height: 30px;
+	margin: 10px auto;
+	border-radius: 25px;
+	border: none;
+	color: #f1f1f1;
+}
+
+.social-login a{
+	font-size: 12px;
+	color: #f1f1f1;
+}
+
+.social-login a i{
+	font-size: 12px;
+	margin-right: 5px;
+
+}
+
+.main_container form p{
+	position: relative;
+	margin: 20px auto 40px;
+	width: 300px;
+
+}
+
+/*.main_container form p input{*/
+/*	background-color: transparent;*/
+/*	border: 0;*/
+/*	border-bottom: 2px #fff solid;*/
+/*	display: block;*/
+/*	width: 100%;*/
+/*	padding: 15px 0;*/
+/*	font-size: 18px;*/
+/*	color: #fff;*/
+/*}*/
+
+/*.main_container form p input:focus,*/
+/*.main_container form p input:valid{*/
+/*	outline: 0;*/
+/*	border-bottom-color: lightblue;*/
+/*}*/
+
+/*.main_container form p label{*/
+/*	position: absolute;*/
+/*	top: /px;*/
+/*	left: 0;*/
+/*	pointer-events: none;*/
+/*}*/
+
+/*.main_container form p label span{*/
+/*	display: inline-block;*/
+/*	font-size: 18px;*/
+/*	min-width: 5px;*/
+/*	transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);*/
+/*}*/
+
+/*.main_container form p input:focus + label span,*/
+/*.main_container form p input:valid + label span{*/
+/*	color: lightblue;*/
+/*	transform: translateY(-30px);*/
+/*}*/
+
+
+
+
+
+
+
+
+
 
 .mySlides {
 	display: none;
