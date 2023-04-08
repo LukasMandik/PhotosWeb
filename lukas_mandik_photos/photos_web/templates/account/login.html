@@ -2,32 +2,50 @@
 {% load socialaccount %}
 
 {% block content %}
-<div class="main_container">
+<div class="login_container">
     <h2>Login</h2>
-    <form method="post">
+    <form method="post" action="{% url 'account_login' %}">
         {% csrf_token %}
-        {{ form.as_p }}
+        <input id="email" style="display:none" type="email" name="fakeusernameremembered" >
+        <input id="password" style="display:none" type="password" name="fakepasswordremembered">
+        <p>
+            <input type="text" id="{{ form.login.id_for_label }}" name="{{ form.login.html_name }}" required  readonly="readonly" onfocus="this.removeAttribute('readonly');" value="">
+            <label for="{{ form.login.id_for_label }}">E-mail:</label>
+        </p>
+        <p>
+            <input type="password" id="{{ form.password.id_for_label }}" name="{{ form.password.html_name }}" required readonly="readonly" onfocus="this.removeAttribute('readonly');" value="">
+            <label for="{{ form.password.id_for_label }}">Password:</label>
+        </p>
         <button type="submit">Login</button>
         <h4> or </h4>
         <div class="social-login">
             <a href="{% provider_login_url 'google' process='login' action='reauthenticate' %}" ><i class="fab fa-google"></i>Login with google</a>
         </div>
     </form>
-    <p>Don't have an account?</p><a href="/register">Create Account</a>
-
+    <p>Don't have an account?</p>
+    <div class="create_account"><a href="/register">Create Account</a></div>
 </div>
 
-<!--<script>-->
-<!--    const labels = document.querySelectorAll(".main_container form p label");-->
 
-<!--    labels.forEach((label) => {-->
-<!--        label.innerHTML = label.innerText-->
-<!--            .split("")-->
-<!--            .map(-->
-<!--                (letter, idx) =>-->
-<!--                    `<span style="transition-delay:${idx * 50}ms">${letter}</span>`-->
-<!--            )-->
-<!--            .join("");-->
-<!--    });-->
-<!--</script>-->
+<script>    document.addEventListener("DOMContentLoaded", function(event)
+{ document.getElementById("username").autocomplete = "off"; }); </script>
+<script> document.addEventListener("DOMContentLoaded", function(event)
+{ document.getElementById("username").autocomplete = "off"; }); </script>
+
+<script>
+    const labels = document.querySelectorAll(".login_container form p label");
+
+    labels.forEach((label) => {
+        label.innerHTML = label.innerText
+            .split("")
+            .map(
+                (letter, idx) =>
+                    `<span style="transition-delay:${idx * 8}ms">${letter}</span>`
+            )
+            .join("");
+    });
+</script>
+
+<script></script>
+
 {% endblock %}

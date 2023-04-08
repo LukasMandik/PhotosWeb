@@ -173,3 +173,10 @@ LOGIN_URL = '/accounts/login/'
 
 LOGIN_REDIRECT_URL = '/'  # Zmeňte toto na URL, na ktorú chcete presmerovať používateľov po prihlásení
 ACCOUNT_EMAIL_VERIFICATION = 'none'  # Nastavte toto na 'none', ak nechcete overenie e-mailu
+
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_USERNAME_REQUIRED = False
+
+# ACCOUNT_SIGNUP_FORM_CLASS = 'photos_web.forms.CustomSignupForm'

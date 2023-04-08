@@ -13,14 +13,22 @@ from django.contrib.auth import login, authenticate, logout
 from .forms import UserCreationWithEmailForm  # Make sure to import the custom form
 
 
+from django.shortcuts import render, redirect
+from django.contrib.auth import login, authenticate
+from .forms import UserCreationWithEmailForm
+from django.contrib.auth.backends import ModelBackend
+
+
 def register(request):
     if request.method == 'POST':
         form = UserCreationWithEmailForm(request.POST)
         if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=password)
+            user = form.save(commit=False)
+            user.first_name = form.cleaned_data['first_name']
+            user.last_name = form.cleaned_data['last_name']
+            user.save()
+            backend = ModelBackend()
+            user.backend = 'django.contrib.auth.backends.ModelBackend'
             login(request, user)
             return redirect('/')
     else:
