@@ -22,12 +22,3 @@ class LikePhotoForm(forms.Form):
     photo_id = forms.ModelChoiceField(queryset=Photo.objects.all(), widget=forms.HiddenInput())
 
 
-from django import forms
-from django.contrib.auth.forms import AuthenticationForm
-
-class CustomAuthenticationForm(AuthenticationForm):
-    username = forms.EmailField(
-        widget=forms.TextInput(attrs={'autofocus': True}),
-        max_length=254,
-        required=True,
-    )
