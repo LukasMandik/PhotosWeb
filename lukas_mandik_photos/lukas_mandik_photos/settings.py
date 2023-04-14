@@ -176,7 +176,18 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'  # Nastavte toto na 'none', ak nechcete over
 
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = True
+ACCOUNT_USER_MODEL_USERNAME_FIELD = 'username'
 ACCOUNT_UNIQUE_EMAIL = True
-ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = False
+ACCOUNT_USER_DISPLAY = lambda user: user.get_full_name()
+# ACCOUNT_ADAPTER = 'lukas_mandik_photos.allauth_adapter.CustomAccountAdapter'
+
+
+
+ACCOUNT_FORMS = {
+    'signup': 'photos_web.forms.MyCustomSignupForm',
+}
+
 
 # ACCOUNT_SIGNUP_FORM_CLASS = 'photos_web.forms.CustomSignupForm'

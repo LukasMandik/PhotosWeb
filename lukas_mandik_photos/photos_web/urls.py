@@ -6,8 +6,8 @@ from . import views
 app_name = 'photos_web'
 
 urlpatterns = [
-    path('register/', views.register, name='register'),
-    path('login/', LoginView.as_view(template_name='login.html'), name='login'),
+    # path('register/', views.register, name='register'),
+    # path('login/', LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', views.user_logout, name='logout'),
     path('hello_world', views.hello_world, name='hello_world'),
     path('', views.home, name='home'),
