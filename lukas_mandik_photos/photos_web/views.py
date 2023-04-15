@@ -92,6 +92,23 @@ def gallery(request):
 
 
 
+def index_store(request):
+    # Vyberie všetky produkty
+    all_products = list(Product.objects.all())
+
+    # Premieša zoznam produktov
+    random.shuffle(all_products)
+
+    # Vyberie prvých tri produkty z premiešaného zoznamu
+    random_products = all_products[:3]
+
+    context = {
+        'random_products': random_products,
+    }
+
+    return render(request, 'store/index.html', context)
+
+
 def all_products(request):
     category_name = request.GET.get('category', '')
     categories = Category.objects.all()
@@ -144,21 +161,6 @@ def category_list(request, category_slug):
     return render(request, 'store/products_gallery.html', context)
 
 
-# from django.http import JsonResponse
-# from django.shortcuts import get_object_or_404
-# from django.views.decorators.csrf import csrf_exempt
-#
-# from .models import Photo
-
-
-# @csrf_exempt
-# def like_photo(request):
-#     if request.method == 'POST':
-#         photo_id = request.POST.get('photo_id')
-#         photo = get_object_or_404(Photo, id=photo_id)
-#         photo.likes += 1
-#         photo.save()
-#         return JsonResponse({'likes': photo.likes})
 
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404

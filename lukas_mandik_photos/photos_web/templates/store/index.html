@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+    <div class="container">
+        <div class="samples_container">
+            <div class="sample_photo1" >
+                <a href="/store/products_gallery/"><img src="{% static 'media/livingroom4.png' %}"></a>
+                <div class="inner_sample_photo">
+                    <img src="{{random_products.0.photo.image.url}}">
+                </div>
+            </div>
+            <div class="sample_photo2">
+                <img src="{% static 'media/livingroom2.png' %}">
+                <div class="inner_sample_photo2">
+                    <img src="{{random_products.1.photo.png_image.url}}">
+                </div>
+            </div>
+            <div class="sample_photo3">
+                <img src="{% static 'media/livingroom6.png'%}">
+                <div class="inner_sample_photo3">
+                    <img src="{{random_products.2.photo.image.url}}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
