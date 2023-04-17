@@ -1,0 +1,2563 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2023-04-05T17:36:00.909Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "vh.me:8000",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2023-04-05T18:50:05.653Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Google login",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2023-04-05T18:55:13.636Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Google login",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Sites\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2023-04-05T18:55:42.017Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Google login",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2023-04-05T18:59:55.493Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Google login",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2023-04-05T20:59:49.513Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Google login",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Sites\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2023-04-06T14:21:07.002Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Norway",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2023-04-06T14:21:27.293Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Glacier _DSC5009.jpg",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2023-04-06T14:21:49.691Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Trolltunga _DSC4061.jpg",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2023-04-06T14:22:22.906Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Malá Fatra",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2023-04-06T14:22:41.690Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Velky Rozsutec _DSC9014.JPG",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2023-04-06T14:23:21.627Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Velky Rozsutec _DSC9014_OqKqCmn.JPG",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2023-04-06T14:23:36.827Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Velky Rozsutec _DSC9014_JJc8Px4.JPG",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2023-04-06T14:23:48.595Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Velky Rozsutec _DSC9014_JJc8Px4.JPG",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2023-04-06T14:24:00.400Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Velky Rozsutec _DSC9014_OqKqCmn.JPG",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2023-04-06T14:24:27.276Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Zapadne Tatry",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2023-04-06T14:25:31.959Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Vysoké Tatry",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2023-04-06T14:25:36.973Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Hreben Vysoke Tatry _DSC4318-Pano-2.JPG",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2023-04-06T14:26:39.023Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Zapadne Tatry _DSC1347.JPG",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2023-04-06T14:27:36.019Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "Zapadne Tatry _DSC4732.jpg",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2023-04-07T08:08:33.459Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "lukas",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2023-04-07T08:08:41.815Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "lukas",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2023-04-07T08:10:19.066Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "lukas",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2023-04-07T08:11:15.320Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "3",
+    "object_repr": "lukas",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2023-04-07T08:11:50.285Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "4",
+    "object_repr": "lukas",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2023-04-07T09:01:01.352Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "127.0.0.1:8000",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Domain name\", \"Display name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2023-04-07T09:14:38.232Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "lukas",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2023-04-07T09:29:09.828Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Google login",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Sites\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2023-04-07T10:48:07.032Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "Lukas",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2023-04-07T10:49:58.165Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "1",
+    "object_repr": "Admin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2023-04-07T10:51:39.435Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "6",
+    "object_repr": "swipe47",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2023-04-07T10:51:54.501Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "7",
+    "object_repr": "swipe47",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2023-04-07T10:54:30.836Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "8",
+    "object_repr": "lukas",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2023-04-07T10:54:46.177Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "1",
+    "object_repr": "Admin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2023-04-07T11:01:39.977Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "1",
+    "object_repr": "Admin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2023-04-07T19:05:29.752Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "10",
+    "object_repr": "Lukas",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2023-04-07T19:05:29.754Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "9",
+    "object_repr": "lukas",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2023-04-07T19:05:29.756Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "11",
+    "object_repr": "lukas3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2023-04-10T16:20:52.843Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Zapadne Tatry",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2023-04-15T15:04:46.959Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Vysoké Tatry",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2023-04-15T15:06:02.047Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Zapadne Tatry",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2023-04-15T15:06:24.479Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Mala Fatra",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2023-04-15T15:07:14.946Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "Zapadne Tatry",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2023-04-15T15:33:59.275Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "Trolltunga",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2023-04-15T16:00:55.183Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "Zapadne Tatry _DSC1228.JPG",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2023-04-15T16:01:30.895Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "Zapadne Tatry",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add site",
+    "content_type": 7,
+    "codename": "add_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change site",
+    "content_type": 7,
+    "codename": "change_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete site",
+    "content_type": 7,
+    "codename": "delete_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view site",
+    "content_type": 7,
+    "codename": "view_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add category",
+    "content_type": 8,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change category",
+    "content_type": 8,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete category",
+    "content_type": 8,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view category",
+    "content_type": 8,
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add photo",
+    "content_type": 9,
+    "codename": "add_photo"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change photo",
+    "content_type": 9,
+    "codename": "change_photo"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete photo",
+    "content_type": 9,
+    "codename": "delete_photo"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view photo",
+    "content_type": 9,
+    "codename": "view_photo"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add product",
+    "content_type": 10,
+    "codename": "add_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change product",
+    "content_type": 10,
+    "codename": "change_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete product",
+    "content_type": 10,
+    "codename": "delete_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view product",
+    "content_type": 10,
+    "codename": "view_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add email address",
+    "content_type": 11,
+    "codename": "add_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change email address",
+    "content_type": 11,
+    "codename": "change_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete email address",
+    "content_type": 11,
+    "codename": "delete_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view email address",
+    "content_type": 11,
+    "codename": "view_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add email confirmation",
+    "content_type": 12,
+    "codename": "add_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change email confirmation",
+    "content_type": 12,
+    "codename": "change_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete email confirmation",
+    "content_type": 12,
+    "codename": "delete_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view email confirmation",
+    "content_type": 12,
+    "codename": "view_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add social account",
+    "content_type": 13,
+    "codename": "add_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change social account",
+    "content_type": 13,
+    "codename": "change_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete social account",
+    "content_type": 13,
+    "codename": "delete_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view social account",
+    "content_type": 13,
+    "codename": "view_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add social application",
+    "content_type": 14,
+    "codename": "add_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change social application",
+    "content_type": 14,
+    "codename": "change_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete social application",
+    "content_type": 14,
+    "codename": "delete_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view social application",
+    "content_type": 14,
+    "codename": "view_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add social application token",
+    "content_type": 15,
+    "codename": "add_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change social application token",
+    "content_type": 15,
+    "codename": "change_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete social application token",
+    "content_type": 15,
+    "codename": "delete_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view social application token",
+    "content_type": 15,
+    "codename": "view_socialtoken"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$xZtT2k8voYgrJ3b4NdVQ31$VV1FLr+3nbujNMbHCzSFGdIleGWQKLy6YKk6d3o5P0g=",
+    "last_login": "2023-04-15T15:03:46.307Z",
+    "is_superuser": true,
+    "username": "Admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "swipe@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-04-05T17:32:30Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 12,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$fD9SikGwAtOksLdItLu40m$A3knCQlFBAuWLR+ej18t+57jFZigSp4Q6tV/alZEWac=",
+    "last_login": "2023-04-14T14:18:03.166Z",
+    "is_superuser": false,
+    "username": "Lukas6",
+    "first_name": "",
+    "last_name": "",
+    "email": "Swipe47@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-07T19:04:41.735Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 13,
+  "fields": {
+    "password": "!6LmOOi1Kycmjt3L4iAufToPL71OPNgnIKCqQcVH7",
+    "last_login": "2023-04-15T07:35:16.259Z",
+    "is_superuser": false,
+    "username": "lukasm",
+    "first_name": "Lukas",
+    "last_name": "Mandik",
+    "email": "swipe47@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-07T19:07:59.418Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$VQolfBfFl1zhr0iVSPVoN2$aL25aSqlLxcxY/2CHnrCfGOU29i3uvSEqtim6oDisPo=",
+    "last_login": "2023-04-08T18:54:35.944Z",
+    "is_superuser": false,
+    "username": "juraj",
+    "first_name": "",
+    "last_name": "",
+    "email": "juraj@dobry.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-08T18:54:35.845Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 15,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$W7kiUz5kFntqfq1zJfiArd$9HVV7x58xrYRAGqCfWTbRb3q3L/hTzdDwkf6ZueOo6c=",
+    "last_login": "2023-04-08T19:20:50.338Z",
+    "is_superuser": false,
+    "username": "jh",
+    "first_name": "",
+    "last_name": "",
+    "email": "jh@jkj.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-08T19:20:50.241Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 16,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$Z8Sk4E9ZCB9SOS9HrtWSiq$Qwj+XXAvjyS9eumjHPsHc8XT5ZkGqLMVizZYqKnV+ZE=",
+    "last_login": "2023-04-08T19:27:22.516Z",
+    "is_superuser": false,
+    "username": "rotunda",
+    "first_name": "",
+    "last_name": "",
+    "email": "rotunda@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-08T19:27:22.423Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 17,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$KnkeYWLk2qwnFvU85JRcHj$bNAtub6AMsYtJgfYN0LrWYUpaIcJbtHiN3zXsrIMQyg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "testovacka",
+    "first_name": "test",
+    "last_name": "test",
+    "email": "test@mail.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-08T19:32:05.538Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 18,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$ow1ZkPj1DBRpELwUd3NzzK$aXtqcFAXrnBzT38wjpxRekrsUbgTSV2oXW8yVXL6ETk=",
+    "last_login": "2023-04-08T19:34:54.695Z",
+    "is_superuser": false,
+    "username": "kankaxmnk",
+    "first_name": "axlmalcmx",
+    "last_name": "axlmaclmx",
+    "email": "axlmxalm@snxkcms.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-08T19:34:54.587Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 19,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$YLVpnHfQsrdchgudP9Wh24$SgO7JOdEO26UUqYPsmaQzXjvsCWMVsjLwLxsGGVoAT8=",
+    "last_login": "2023-04-08T19:40:30.292Z",
+    "is_superuser": false,
+    "username": "xsacx",
+    "first_name": "Lukas",
+    "last_name": "Mandik",
+    "email": "Swipxsaxe47@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-08T19:40:30.187Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 20,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$3E0qEsY1Mo1g9q8nxEY76G$YCmUU6wstHTVjOpWyXzu/06P4NhZ5k2XvboJ3oc71nI=",
+    "last_login": "2023-04-08T19:50:30.327Z",
+    "is_superuser": false,
+    "username": "BD60118i",
+    "first_name": "Lukas",
+    "last_name": "Mandik",
+    "email": "Swipe@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-08T19:50:30.225Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 21,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$plERjdYSxFOfNtjIj13krx$tHKhiTMW9QQ6F1l27P6l0pOn1aqeILUQrhWiORHV798=",
+    "last_login": "2023-04-08T20:46:03.604Z",
+    "is_superuser": false,
+    "username": "Luklasko",
+    "first_name": "Lukas23",
+    "last_name": "lukas23",
+    "email": "swip@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-08T20:43:27.800Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 22,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$krf24m2Im3QsKb6bftpd66$Dq/81/GDrT4pVIGJ+Y2RVUTru4A0sV0oB7AV46xH18E=",
+    "last_login": "2023-04-14T18:49:33.292Z",
+    "is_superuser": false,
+    "username": "Dominik",
+    "first_name": "Dominik",
+    "last_name": "Dobry",
+    "email": "D@d.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-08T20:48:21.582Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 23,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$YcOhBJPLF01BdVbUaw4p0Y$9pJnwC1DhMTIg2F9m3i5naKtqSWmZRumrjEk1UopAzA=",
+    "last_login": "2023-04-09T15:35:40.579Z",
+    "is_superuser": false,
+    "username": "fwesdxz",
+    "first_name": "scxxz",
+    "last_name": "scxzxz",
+    "email": "dsacxz@csd.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-09T15:35:40.469Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 24,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$U2Y9y9Mj9z7tjEX4IJsyfO$1du2bTR1xUyaPUMjq+y6oJ5I7rNibFSBRUego+5CW8k=",
+    "last_login": "2023-04-12T07:23:47.800Z",
+    "is_superuser": false,
+    "username": "LukasMandik",
+    "first_name": "Lukas",
+    "last_name": "Mandik",
+    "email": "Swipe47@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-12T07:23:47.695Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 25,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$w0iY6XRfLRXGf40hZAUIWQ$pCMz7TIEPhzvgR2wMW2ojW1fr6dKK/ZNuQQDXy04zHc=",
+    "last_login": "2023-04-14T14:37:12.880Z",
+    "is_superuser": false,
+    "username": "",
+    "first_name": "Denisa",
+    "last_name": "Pukacova",
+    "email": "denisa@pukac.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T14:37:12.790Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 26,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$YACFkDlkuGegu2IyvzPEPE$sHjY9X7YN2PT4fieJ9hB5l/5y1k+iVK7f+kAE93suj8=",
+    "last_login": "2023-04-14T15:24:10.967Z",
+    "is_superuser": false,
+    "username": "BlankaM",
+    "first_name": "Blanka",
+    "last_name": "Mandikova",
+    "email": "Blanka@mandik.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T15:24:10.879Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 27,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$WmZgxoDlUKEiLQYPSza0un$jluaMkuzcsvUYIelRmM/NjOYZhcOIzrA4uTnMpwSsRk=",
+    "last_login": "2023-04-14T15:43:59.459Z",
+    "is_superuser": false,
+    "username": "Samo",
+    "first_name": "Samuel",
+    "last_name": "Mandik",
+    "email": "Sw47@ail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T15:43:59.367Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 28,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$tqxLnTTdyKCZx2dThrMDIm$vNsWTyYJNjoZzinPUaCNwshFY4+UUjEjgU6t4MeIY/8=",
+    "last_login": "2023-04-14T15:52:06.005Z",
+    "is_superuser": false,
+    "username": "Palo",
+    "first_name": "Palo",
+    "last_name": "Sipi",
+    "email": "sip@pali.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T15:52:05.913Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 29,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$pgZpg0O656zg2blRjK7QJ8$yXiy2qKicnm/BxeS5In+r/ZXR+05ECRoBElhHU5zUf8=",
+    "last_login": "2023-04-14T16:07:36.953Z",
+    "is_superuser": false,
+    "username": "skuska",
+    "first_name": "skuaska",
+    "last_name": "skuaska",
+    "email": "skuaska@as.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T16:07:36.857Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 30,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$YiSUqmtmK8NEapFhsLi2WG$BhQQh/zoB/xEbxgSWJHb5QlxLSX02ZwSTVulPsiILYo=",
+    "last_login": "2023-04-14T16:18:15.201Z",
+    "is_superuser": false,
+    "username": "wsa",
+    "first_name": "sas",
+    "last_name": "das",
+    "email": "sasa@gm.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T16:15:54.754Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 31,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$eJuak3K4Np8DH4qfx93bbk$guyr5CroeVrQPrl5IN2hWWlihbGnNE4PGwHEXIHIv+s=",
+    "last_login": "2023-04-14T16:19:31.307Z",
+    "is_superuser": false,
+    "username": "Deniska",
+    "first_name": "sazxcs",
+    "last_name": "csdxzs",
+    "email": "scazxzxs@csdxz.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T16:19:31.201Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 32,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$suiWizqBY97ZUTkpkDQxiQ$kASGgpySKwAXfAwhx2KV+kYQqzL7a7dUn2U6ITRfs7s=",
+    "last_login": "2023-04-14T16:21:13.907Z",
+    "is_superuser": false,
+    "username": "asd",
+    "first_name": "sasad",
+    "last_name": "asdasd",
+    "email": "sdadas@sxzc.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T16:21:13.801Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 33,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$TgIwH5NpxpXk8I6g7CiRja$rPXZcpwHeEt7NxzHTTMZo0sLgwHWkbJInMKXQu2m6QM=",
+    "last_login": "2023-04-14T16:22:13.783Z",
+    "is_superuser": false,
+    "username": "Andrej",
+    "first_name": "Ado",
+    "last_name": "Ado",
+    "email": "ado@ado.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T16:22:13.697Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 34,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$Fstl8LSBrzpHl0e13up5bQ$bpPHx6cGfA+aQ7pJl4zDdMldCt8fA/9bihw4uvMMT2Q=",
+    "last_login": "2023-04-14T16:29:50.875Z",
+    "is_superuser": false,
+    "username": "12qw",
+    "first_name": "sadcx",
+    "last_name": "dcsxdcs",
+    "email": "csdxcds@scdxcsx.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T16:29:50.771Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 35,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$4Bm2giD04SwIHoUNn5BNxO$dkUXyF5IG2flhl0/NkKvDztNm/8ApJWakI4FuF7A/4k=",
+    "last_login": "2023-04-14T16:49:21.262Z",
+    "is_superuser": false,
+    "username": "Hugo",
+    "first_name": "Hugo",
+    "last_name": "Hugovic",
+    "email": "hugo@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T16:31:49.239Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 36,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$KXog9lCdVHAh0PFXjtfGKa$11XOLC+HwOUlWxRccXCmIoPsw3LcfoIpS+Bvs+jCHT0=",
+    "last_login": "2023-04-14T16:54:16.542Z",
+    "is_superuser": false,
+    "username": "dodo@drumach.sk",
+    "first_name": "cdsxdsx",
+    "last_name": "csdxdcx",
+    "email": "dodo@drumach.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T16:53:25.603Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 37,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$QrdHWMHN4LPrjinQq68vEg$arAcO0WAkSLWGrqcems0aKC8j7FkPUI/MfnMPfrTlS4=",
+    "last_login": "2023-04-14T16:55:43.152Z",
+    "is_superuser": false,
+    "username": "skusto@sk.sk",
+    "first_name": "scxx z",
+    "last_name": "csx",
+    "email": "skusto@sk.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T16:55:43.046Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 38,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$c2mo80kGSL8jOp543gJvV5$YvZb0dfRxoJOCZwS+fn121z3NY66y6vzWTQSVgBjDi8=",
+    "last_login": "2023-04-14T17:00:00.367Z",
+    "is_superuser": false,
+    "username": "aho@gmail.com",
+    "first_name": "csdxzsxz",
+    "last_name": "sxzxz",
+    "email": "aho@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T17:00:00.263Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 39,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$Wy2I8AK7yhWK7m23ozc4D2$gKMS8RugaUWoCWpwDYAA1U+uhfRwg7JqZad0iu82LLQ=",
+    "last_login": "2023-04-14T17:02:05.952Z",
+    "is_superuser": false,
+    "username": "ahol@gmail.sk",
+    "first_name": "sxz",
+    "last_name": "csdxxs",
+    "email": "ahol@gmail.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T17:02:05.849Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 40,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$yChLYeJhwxWn6o05OOS3mS$0wBLt9lpHZ/SbYhE6O39T6ozlv562s/TBN6M4ftaj54=",
+    "last_login": "2023-04-14T17:06:55.226Z",
+    "is_superuser": false,
+    "username": "hugo2@gmail.com",
+    "first_name": "Hugo",
+    "last_name": "sxscx",
+    "email": "hugo2@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T17:04:48.695Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 41,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$v4UwlE91BNTwaUajkF35BV$ZrTi3I0wWS/fTEM1auysLbD2DAX1AfFB4g/TSJd3VBA=",
+    "last_login": "2023-04-14T17:13:27.547Z",
+    "is_superuser": false,
+    "username": "swipe32@g.sk",
+    "first_name": "LUK",
+    "last_name": "PUK",
+    "email": "swipe32@g.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T17:13:12.074Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 42,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$aNQyEXQm1tn8VFZRzxnlkz$4R1BjpOyhhcHpFIRqhIhd1zLttWyqhUFhvyXE+buf9M=",
+    "last_login": "2023-04-14T17:45:54.761Z",
+    "is_superuser": false,
+    "username": "hugo24@gmail.com",
+    "first_name": "dvcsxzcxz",
+    "last_name": "sdcxzvhu",
+    "email": "hugo24@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T17:28:16.303Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 43,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$CSnalMFggeRgMTYB2PEMwq$k/FaSo/9jtyo1zKl3swj0YvQ1SmuSdm8G2GRESPliS4=",
+    "last_login": "2023-04-14T18:30:11.596Z",
+    "is_superuser": false,
+    "username": "Swipe47x@gmail.com",
+    "first_name": "Lukas",
+    "last_name": "12qw",
+    "email": "Swipe47x@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T18:29:20.164Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 44,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$KaMg5VgeNPTBcL5So6lHbn$/3h49eFEZV+oyRIHKv/QgQ9KCLDhzZiQiYwlrBvtE1o=",
+    "last_login": "2023-04-15T13:36:11.683Z",
+    "is_superuser": false,
+    "username": "Blanka@mandik22.sk",
+    "first_name": "Blannka",
+    "last_name": "dobra",
+    "email": "Blanka@mandik22.sk",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-14T18:46:33.269Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "sites",
+    "model": "site"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "photos_web",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "photos_web",
+    "model": "photo"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "photos_web",
+    "model": "product"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "account",
+    "model": "emailaddress"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "account",
+    "model": "emailconfirmation"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "socialaccount",
+    "model": "socialaccount"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "socialaccount",
+    "model": "socialapp"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "socialaccount",
+    "model": "socialtoken"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "h92f3ho7zvz3coubk4rhciy6smgw11fz",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHyBpfu_QYyA4NUDSSlXRn_3TbpQrf3nHPfLMK61LgOmuOU2YUJdvrdENKT2g7yA9q989TbMk_Id4UfdPBbz_S6Hu7fQYVRtxqtlgimJA9ekRDCCu2TK9IABW0RhZFSaTyTSsHihoPxkB1qpOJ8YZ8v2u030A:1pklxC:v-6srNSz9HTzcnE-1UljI2sPfulb_i93fNX17fn6fy4",
+    "expire_date": "2023-04-21T13:16:34.560Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "kjf27xm0qvu9w6h48jnjdsl1v8w97epb",
+  "fields": {
+    "session_data": "e30:1plEI9:C9tS-m2R7HDCHXstKCQqYJHkLVWq_FiE5Zz0U2RZbxA",
+    "expire_date": "2023-04-22T19:32:05.638Z"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 1,
+  "fields": {
+    "domain": "example.com",
+    "name": "example.com"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 2,
+  "fields": {
+    "domain": "127.0.0.1:8000",
+    "name": "127.0.0.1:8000"
+  }
+},
+{
+  "model": "photos_web.category",
+  "pk": 1,
+  "fields": {
+    "name": "Norway",
+    "slug": "norway"
+  }
+},
+{
+  "model": "photos_web.category",
+  "pk": 2,
+  "fields": {
+    "name": "Malá Fatra",
+    "slug": "mala-fatra"
+  }
+},
+{
+  "model": "photos_web.category",
+  "pk": 3,
+  "fields": {
+    "name": "Zapadne Tatry",
+    "slug": "zapadne-tatry"
+  }
+},
+{
+  "model": "photos_web.category",
+  "pk": 4,
+  "fields": {
+    "name": "Vysoké Tatry",
+    "slug": "vysoke-tatry"
+  }
+},
+{
+  "model": "photos_web.photo",
+  "pk": 1,
+  "fields": {
+    "name": "Glacier",
+    "slug": "glacier",
+    "image": "_DSC5009.jpg",
+    "category": 1,
+    "png_image": "_DSC5009.png",
+    "image_name": "_DSC5009.jpg",
+    "file_name": "_DSC5009",
+    "description": "qw",
+    "timestamp": "2022-09-30T15:13:35Z",
+    "device": "NIKON D5300 NIKON CORPORATION",
+    "width": 6000,
+    "height": 4000,
+    "gps_coordinates": null,
+    "meta_data": "{'ResolutionUnit': 2, 'ExifOffset': 208, 'Make': 'NIKON CORPORATION', 'Model': 'NIKON D5300', 'Software': 'Adobe Lightroom 5.5 (Macintosh)', 'DateTime': '2022:11:02 08:47:23', 'XResolution': 240.0, 'YResolution': 240.0, 'ExifVersion': b'0231', 'ShutterSpeedValue': 7.643856, 'ApertureValue': 6.0, 'DateTimeOriginal': '2022:09:30 15:13:35', 'DateTimeDigitized': '2022:09:30 15:13:35', 'ExposureBiasValue': 0.0, 'MaxApertureValue': 1.6, 'MeteringMode': 3, 'LightSource': 10, 'Flash': 0, 'FocalLength': 35.0, 'ColorSpace': 65535, 'WhiteBalance': 1, 'DigitalZoomRatio': 1.0, 'FocalPlaneXResolution': 2558.6412048339844, 'FocalPlaneYResolution': 2558.6412048339844, 'OffsetTime': '+01:00', 'SubsecTimeOriginal': '20', 'SubsecTimeDigitized': '20', 'FocalPlaneResolutionUnit': 3, 'SubjectDistanceRange': 0, 'SensingMethod': 2, 'FileSource': b'\\x03', 'ExposureTime': 0.005, 'FNumber': 8.0, 'SceneType': b'\\x01', 'ExposureProgram': 1, 'CFAPattern': b'\\x02\\x00\\x02\\x00\\x00\\x01\\x01\\x02', 'CustomRendered': 0, 'ISOSpeedRatings': 100, 'ExposureMode': 1, 'SensitivityType': 2, 'BodySerialNumber': '4526831', 'LensSpecification': (18.0, 35.0, 1.8, 1.8), 'LensModel': '18.0-35.0 mm f/1.8', 'FocalLengthIn35mmFilm': 52, 'SceneCaptureType': 0, 'GainControl': 0, 'Contrast': 0, 'Saturation': 0, 'Sharpness': 0}",
+    "image_mode": "RGB",
+    "image_size": "(6000, 4000)",
+    "bands": "R, G, B",
+    "mean": "138.20150020833333, 141.73954225, 148.86133408333333",
+    "median": "151, 158, 176",
+    "std_dev": "66.88836907707528, 67.3423810186458, 72.76580944725039",
+    "brightness": "153.53731982037786, 156.92384815094232, 165.694175545139",
+    "likes": 0,
+    "created_at": "2023-04-06T14:21:25.504Z",
+    "updated_at": "2023-04-06T14:21:27.290Z",
+    "user_likes": []
+  }
+},
+{
+  "model": "photos_web.photo",
+  "pk": 2,
+  "fields": {
+    "name": "Trolltunga",
+    "slug": "trolltunga",
+    "image": "_DSC4061.jpg",
+    "category": 1,
+    "png_image": "_DSC4061.png",
+    "image_name": "_DSC4061.jpg",
+    "file_name": "_DSC4061",
+    "description": "d",
+    "timestamp": "2021-08-26T20:05:58Z",
+    "device": "NIKON D5300 NIKON CORPORATION",
+    "width": 4592,
+    "height": 3061,
+    "gps_coordinates": null,
+    "meta_data": "{'ResolutionUnit': 2, 'ExifOffset': 240, 'Make': 'NIKON CORPORATION', 'Model': 'NIKON D5300', 'Software': 'Adobe Lightroom 5.5 (Macintosh)', 'DateTime': '2022:11:01 16:23:51', 'Copyright': 'Â© LukÃ¡Å¡ MandÃ\\xadk', 'XResolution': 240.0, 'YResolution': 240.0, 'ExifVersion': b'0231', 'ShutterSpeedValue': 7.965784, 'ApertureValue': 4.0, 'DateTimeOriginal': '2021:08:26 20:05:58', 'DateTimeDigitized': '2021:08:26 20:05:58', 'ExposureBiasValue': 0.0, 'MaxApertureValue': 1.6, 'MeteringMode': 5, 'LightSource': 10, 'Flash': 0, 'FocalLength': 18.0, 'ColorSpace': 65535, 'WhiteBalance': 1, 'DigitalZoomRatio': 1.0, 'FocalPlaneXResolution': 2558.6412048339844, 'FocalPlaneYResolution': 2558.6412048339844, 'OffsetTime': '+01:00', 'OffsetTimeOriginal': '+02:00', 'OffsetTimeDigitized': '+02:00', 'SubsecTimeOriginal': '80', 'SubsecTimeDigitized': '800', 'FocalPlaneResolutionUnit': 3, 'SensingMethod': 2, 'FileSource': b'\\x03', 'ExposureTime': 0.004, 'FNumber': 4.0, 'SceneType': b'\\x01', 'ExposureProgram': 1, 'CFAPattern': b'\\x02\\x00\\x02\\x00\\x00\\x01\\x01\\x02', 'CustomRendered': 0, 'ISOSpeedRatings': 100, 'ExposureMode': 1, 'SensitivityType': 2, 'BodySerialNumber': '4526831', 'LensSpecification': (18.0, 35.0, 1.8, 1.8), 'LensModel': '18.0-35.0 mm f/1.8', 'FocalLengthIn35mmFilm': 27, 'SceneCaptureType': 0, 'GainControl': 0, 'Contrast': 0, 'Saturation': 0, 'Sharpness': 0, 'SubjectDistanceRange': 0}",
+    "image_mode": "RGB",
+    "image_size": "(4592, 3061)",
+    "bands": "R, G, B",
+    "mean": "106.70211022792078, 105.74993838979086, 102.65255313844966",
+    "median": "54, 54, 52",
+    "std_dev": "90.35303086732274, 89.75046548883765, 88.20424792135694",
+    "brightness": "139.81777610161998, 138.70182235611614, 135.34229204950842",
+    "likes": 5,
+    "created_at": "2023-04-06T14:21:49.011Z",
+    "updated_at": "2023-04-14T18:47:40.448Z",
+    "user_likes": [
+      1,
+      13,
+      20,
+      44
+    ]
+  }
+},
+{
+  "model": "photos_web.photo",
+  "pk": 3,
+  "fields": {
+    "name": "Velky Rozsutec",
+    "slug": "velky-rozsutec",
+    "image": "_DSC9014.JPG",
+    "category": 2,
+    "png_image": "_DSC9014.png",
+    "image_name": "_DSC9014.JPG",
+    "file_name": "_DSC9014",
+    "description": "w",
+    "timestamp": "2020-02-08T16:28:00Z",
+    "device": "NIKON D5300 NIKON CORPORATION",
+    "width": 4000,
+    "height": 5000,
+    "gps_coordinates": null,
+    "meta_data": "{'ResolutionUnit': 2, 'ExifOffset': 204, 'Make': 'NIKON CORPORATION', 'Model': 'NIKON D5300', 'Software': 'Adobe Photoshop Lightroom 6.0 (Macintosh)', 'DateTime': '2020:02:19 14:18:07', 'Copyright': 'Â© LukÃ¡Å¡ MandÃ\\xadk', 'XResolution': 300.0, 'YResolution': 300.0, 'ExifVersion': b'0231', 'ShutterSpeedValue': 7.965784, 'ApertureValue': 4.0, 'DateTimeOriginal': '2020:02:08 16:28:00', 'DateTimeDigitized': '2020:02:08 16:28:00', 'ExposureBiasValue': 0.0, 'MaxApertureValue': 1.6, 'MeteringMode': 5, 'LightSource': 10, 'Flash': 0, 'FocalLength': 28.0, 'ColorSpace': 1, 'WhiteBalance': 1, 'DigitalZoomRatio': 1.0, 'FocalPlaneXResolution': 2558.6412048339844, 'FocalPlaneYResolution': 2558.6412048339844, 'OffsetTime': '+01:00', 'SubsecTimeOriginal': '2', 'SubsecTimeDigitized': '2', 'FocalPlaneResolutionUnit': 3, 'SubjectDistanceRange': 0, 'SensingMethod': 2, 'FileSource': b'\\x03', 'ExposureTime': 0.004, 'FNumber': 4.0, 'SceneType': b'\\x01', 'ExposureProgram': 1, 'CFAPattern': b'\\x02\\x00\\x02\\x00\\x00\\x01\\x01\\x02', 'CustomRendered': 0, 'ISOSpeedRatings': 200, 'ExposureMode': 1, 'SensitivityType': 2, 'BodySerialNumber': '4526831', 'LensSpecification': (18.0, 35.0, 1.8, 1.8), 'LensModel': '18.0-35.0 mm f/1.8', 'FocalLengthIn35mmFilm': 42, 'SceneCaptureType': 1, 'GainControl': 0, 'Contrast': 0, 'Saturation': 0, 'Sharpness': 0}",
+    "image_mode": "RGB",
+    "image_size": "(4000, 5000)",
+    "bands": "R, G, B",
+    "mean": "93.65074, 92.94434905, 95.69395995",
+    "median": "49, 50, 53",
+    "std_dev": "73.78705515706939, 72.65281692007382, 74.25821603794287",
+    "brightness": "119.22663549433909, 117.9706905411255, 121.1264488873095",
+    "likes": 3,
+    "created_at": "2023-04-06T14:22:40.461Z",
+    "updated_at": "2023-04-07T19:17:04.370Z",
+    "user_likes": [
+      1,
+      13
+    ]
+  }
+},
+{
+  "model": "photos_web.photo",
+  "pk": 6,
+  "fields": {
+    "name": "Hreben Vysoke Tatry",
+    "slug": "hreben-vysoke-tatry",
+    "image": "_DSC4318-Pano-2.JPG",
+    "category": 4,
+    "png_image": "_DSC4318-Pano-2.png",
+    "image_name": "_DSC4318-Pano-2.JPG",
+    "file_name": "_DSC4318-Pano-2",
+    "description": "ws",
+    "timestamp": "2019-09-03T12:23:41Z",
+    "device": null,
+    "width": 5218,
+    "height": 6521,
+    "gps_coordinates": null,
+    "meta_data": "{'ResolutionUnit': 2, 'ExifOffset': 196, 'Software': 'Adobe Photoshop Lightroom 6.0 (Macintosh)', 'DateTime': '2019:09:03 12:23:41', 'Copyright': 'Â© LukÃ¡Å¡ MandÃ\\xadk', 'XResolution': 72.0, 'YResolution': 72.0, 'ExifVersion': b'0221', 'ComponentsConfiguration': b'\\x01\\x02\\x03\\x00', 'FlashPixVersion': b'0100', 'DateTimeOriginal': '2019:09:03 12:23:41', 'DateTimeDigitized': '2019:09:03 12:23:41', 'ColorSpace': 65535, 'ExifImageWidth': 5218, 'ExifImageHeight': 6521, 'SceneCaptureType': 0, 'OffsetTime': '+02:00', 'OffsetTimeOriginal': '+02:00', 'OffsetTimeDigitized': '+02:00', 'SubsecTime': '460', 'SubsecTimeOriginal': '460', 'SubsecTimeDigitized': '460'}",
+    "image_mode": "RGB",
+    "image_size": "(5218, 6521)",
+    "bands": "R, G, B",
+    "mean": "123.98931270726078, 113.38182320302677, 105.12079977598688",
+    "median": "97, 68, 50",
+    "std_dev": "82.48407279180405, 82.252176391557, 84.46793865839919",
+    "brightness": "148.9193470639142, 140.07447431273917, 134.85256840988313",
+    "likes": 4,
+    "created_at": "2023-04-06T14:25:35.186Z",
+    "updated_at": "2023-04-14T18:47:35.253Z",
+    "user_likes": [
+      1,
+      20,
+      44
+    ]
+  }
+},
+{
+  "model": "photos_web.photo",
+  "pk": 7,
+  "fields": {
+    "name": "Zapadne Tatry",
+    "slug": "zapadne-tatry2",
+    "image": "_DSC1347.JPG",
+    "category": 3,
+    "png_image": "_DSC1347.png",
+    "image_name": "_DSC1347.JPG",
+    "file_name": "_DSC1347",
+    "description": "dsc",
+    "timestamp": "2020-08-05T19:13:34Z",
+    "device": "NIKON D5300 NIKON CORPORATION",
+    "width": 3867,
+    "height": 4834,
+    "gps_coordinates": null,
+    "meta_data": "{'ResolutionUnit': 2, 'ExifOffset': 204, 'Make': 'NIKON CORPORATION', 'Model': 'NIKON D5300', 'Software': 'Ver.1.03', 'DateTime': '2020:08:14 10:42:16', 'Copyright': 'Â© LukÃ¡Å¡ MandÃ\\xadk', 'XResolution': 300.0, 'YResolution': 300.0, 'ExifVersion': b'0231', 'ShutterSpeedValue': 8.321928, 'ApertureValue': 6.33985, 'DateTimeOriginal': '2020:08:05 19:13:34', 'DateTimeDigitized': '2020:08:05 19:13:34', 'ExposureBiasValue': 1.0, 'MaxApertureValue': 1.6, 'MeteringMode': 5, 'LightSource': 10, 'Flash': 0, 'FocalLength': 18.0, 'ColorSpace': 1, 'WhiteBalance': 1, 'DigitalZoomRatio': 1.0, 'FocalPlaneXResolution': 2558.6412048339844, 'FocalPlaneYResolution': 2558.6412048339844, 'OffsetTime': '+02:00', 'SubsecTimeOriginal': '4', 'SubsecTimeDigitized': '4', 'FocalPlaneResolutionUnit': 3, 'SubjectDistanceRange': 0, 'SensingMethod': 2, 'FileSource': b'\\x03', 'ExposureTime': 0.003125, 'FNumber': 9.0, 'SceneType': b'\\x01', 'ExposureProgram': 1, 'CFAPattern': b'\\x02\\x00\\x02\\x00\\x00\\x01\\x01\\x02', 'CustomRendered': 0, 'ISOSpeedRatings': 125, 'ExposureMode': 1, 'SensitivityType': 2, 'BodySerialNumber': '4526831', 'LensSpecification': (18.0, 35.0, 1.8, 1.8), 'LensModel': '18.0-35.0 mm f/1.8', 'FocalLengthIn35mmFilm': 27, 'SceneCaptureType': 0, 'GainControl': 0, 'Contrast': 0, 'Saturation': 0, 'Sharpness': 0}",
+    "image_mode": "RGB",
+    "image_size": "(3867, 4834)",
+    "bands": "R, G, B",
+    "mean": "92.80676510310394, 98.20555336044711, 105.89868912974097",
+    "median": "65, 69, 77",
+    "std_dev": "64.74551256509818, 69.93845117941498, 75.82332609425822",
+    "brightness": "113.15952035166991, 120.56416409616516, 130.2448046541348",
+    "likes": 6,
+    "created_at": "2023-04-06T14:26:37.538Z",
+    "updated_at": "2023-04-14T18:47:27.478Z",
+    "user_likes": [
+      1,
+      13,
+      20,
+      44
+    ]
+  }
+},
+{
+  "model": "photos_web.photo",
+  "pk": 8,
+  "fields": {
+    "name": "Zapadne Tatry",
+    "slug": "zapadne-tatry3",
+    "image": "_DSC4732.jpg",
+    "category": 3,
+    "png_image": "_DSC4732.png",
+    "image_name": "_DSC4732.jpg",
+    "file_name": "_DSC4732",
+    "description": "cxz",
+    "timestamp": "2019-07-21T05:25:34Z",
+    "device": "NIKON D5300 NIKON CORPORATION",
+    "width": 3884,
+    "height": 5825,
+    "gps_coordinates": null,
+    "meta_data": "{'ResolutionUnit': 2, 'ExifOffset': 250, 'Make': 'NIKON CORPORATION', 'Model': 'NIKON D5300', 'Software': 'Adobe Photoshop Lightroom 6.0 (Macintosh)', 'DateTime': '2020:04:02 10:23:59', 'Copyright': 'Â© LukÃ¡Å¡ MandÃ\\xadk', 'XResolution': 300.0, 'YResolution': 300.0, 'ExifVersion': b'0231', 'ShutterSpeedValue': 7.965783992859268, 'ApertureValue': 6.0, 'DateTimeOriginal': '2019:07:21 05:25:34', 'DateTimeDigitized': '2019:07:21 05:25:34', 'ExposureBiasValue': 0.0, 'MaxApertureValue': 1.6, 'MeteringMode': 5, 'LightSource': 10, 'Flash': 0, 'FocalLength': 32.0, 'ExifImageWidth': 3884, 'ExifImageHeight': 5825, 'DigitalZoomRatio': 1.0, 'FocalPlaneXResolution': 2558.641203703704, 'FocalPlaneYResolution': 2558.641203703704, 'OffsetTime': '+02:00', 'SubsecTimeOriginal': '8', 'SubsecTimeDigitized': '8', 'FocalPlaneResolutionUnit': 3, 'SubjectDistanceRange': 0, 'SensingMethod': 2, 'FileSource': b'\\x03', 'ExposureTime': 0.004, 'FNumber': 8.0, 'SceneType': b'\\x01', 'ExposureProgram': 1, 'CustomRendered': 0, 'ISOSpeedRatings': 250, 'ExposureMode': 1, 'SensitivityType': 2, 'WhiteBalance': 1, 'BodySerialNumber': '4526831', 'LensSpecification': (18.0, 35.0, 1.8, 1.8), 'LensModel': '18.0-35.0 mm f/1.8', 'FocalLengthIn35mmFilm': 48, 'SceneCaptureType': 0, 'GainControl': 0, 'Contrast': 0, 'Saturation': 0, 'Sharpness': 0}",
+    "image_mode": "RGB",
+    "image_size": "(3884, 5825)",
+    "bands": "R, G, B",
+    "mean": "125.5405839738688, 107.4779450855938, 90.17096723434537",
+    "median": "106, 75, 58",
+    "std_dev": "93.21070695963338, 80.65600088156665, 67.6084336295153",
+    "brightness": "156.36071794544387, 134.3759619799211, 112.70183507740218",
+    "likes": 4,
+    "created_at": "2023-04-06T14:27:34.797Z",
+    "updated_at": "2023-04-14T18:47:23.788Z",
+    "user_likes": [
+      20,
+      44
+    ]
+  }
+},
+{
+  "model": "photos_web.photo",
+  "pk": 9,
+  "fields": {
+    "name": "Zapadne Tatry",
+    "slug": "zapadne-tatry4",
+    "image": "_DSC1228.JPG",
+    "category": 3,
+    "png_image": "_DSC1228.png",
+    "image_name": "_DSC1228.JPG",
+    "file_name": "_DSC1228",
+    "description": "fvdc",
+    "timestamp": "2020-08-05T18:37:08Z",
+    "device": "NIKON D5300 NIKON CORPORATION",
+    "width": 4000,
+    "height": 6000,
+    "gps_coordinates": null,
+    "meta_data": "{'ResolutionUnit': 2, 'ExifOffset': 204, 'Make': 'NIKON CORPORATION', 'Model': 'NIKON D5300', 'Software': 'Ver.1.03', 'DateTime': '2020:11:10 15:43:33', 'Copyright': 'Â© LukÃ¡Å¡ MandÃ\\xadk', 'XResolution': 300.0, 'YResolution': 300.0, 'ExifVersion': b'0231', 'ShutterSpeedValue': 8.321928, 'ApertureValue': 4.643856, 'DateTimeOriginal': '2020:08:05 18:37:08', 'DateTimeDigitized': '2020:08:05 18:37:08', 'ExposureBiasValue': 1.0, 'MaxApertureValue': 1.6, 'MeteringMode': 5, 'LightSource': 10, 'Flash': 0, 'FocalLength': 18.0, 'ColorSpace': 1, 'WhiteBalance': 1, 'DigitalZoomRatio': 1.0, 'FocalPlaneXResolution': 2558.6412048339844, 'FocalPlaneYResolution': 2558.6412048339844, 'OffsetTime': '+01:00', 'SubsecTimeOriginal': '5', 'SubsecTimeDigitized': '5', 'FocalPlaneResolutionUnit': 3, 'SubjectDistanceRange': 0, 'SensingMethod': 2, 'FileSource': b'\\x03', 'ExposureTime': 0.003125, 'FNumber': 5.0, 'SceneType': b'\\x01', 'ExposureProgram': 1, 'CFAPattern': b'\\x02\\x00\\x02\\x00\\x00\\x01\\x01\\x02', 'CustomRendered': 0, 'ISOSpeedRatings': 125, 'ExposureMode': 1, 'SensitivityType': 2, 'BodySerialNumber': '4526831', 'LensSpecification': (18.0, 35.0, 1.8, 1.8), 'LensModel': '18.0-35.0 mm f/1.8', 'FocalLengthIn35mmFilm': 27, 'SceneCaptureType': 0, 'GainControl': 0, 'Contrast': 0, 'Saturation': 0, 'Sharpness': 0}",
+    "image_mode": "RGB",
+    "image_size": "(4000, 6000)",
+    "bands": "R, G, B",
+    "mean": "141.09653891666667, 136.56045933333334, 131.71277754166667",
+    "median": "156, 156, 161",
+    "std_dev": "66.60290554901417, 70.30539208756097, 80.8337345969146",
+    "brightness": "156.0262167772882, 153.59559632332127, 154.53914849197596",
+    "likes": 0,
+    "created_at": "2023-04-15T16:00:53.780Z",
+    "updated_at": "2023-04-15T16:00:55.180Z",
+    "user_likes": []
+  }
+},
+{
+  "model": "photos_web.product",
+  "pk": 1,
+  "fields": {
+    "name": "Mala Fatra",
+    "slug": "mala-fatra",
+    "created_by": 1,
+    "category": 1,
+    "author": "admin",
+    "description": "",
+    "photo": 3,
+    "price": "12.00",
+    "stock": 0,
+    "in_stock": true,
+    "is_active": true,
+    "created": "2023-04-10T16:20:52.842Z",
+    "updated": "2023-04-15T15:06:24.478Z"
+  }
+},
+{
+  "model": "photos_web.product",
+  "pk": 2,
+  "fields": {
+    "name": "Vysoké Tatry",
+    "slug": "vysoke-tatry",
+    "created_by": 1,
+    "category": 4,
+    "author": "admin",
+    "description": "",
+    "photo": 6,
+    "price": "12.99",
+    "stock": 0,
+    "in_stock": true,
+    "is_active": true,
+    "created": "2023-04-15T15:04:46.957Z",
+    "updated": "2023-04-15T15:04:46.957Z"
+  }
+},
+{
+  "model": "photos_web.product",
+  "pk": 3,
+  "fields": {
+    "name": "Zapadne Tatry",
+    "slug": "zapadne-tatry2",
+    "created_by": 1,
+    "category": 3,
+    "author": "admin",
+    "description": "",
+    "photo": 7,
+    "price": "11.99",
+    "stock": 0,
+    "in_stock": true,
+    "is_active": true,
+    "created": "2023-04-15T15:06:02.045Z",
+    "updated": "2023-04-15T15:06:02.045Z"
+  }
+},
+{
+  "model": "photos_web.product",
+  "pk": 4,
+  "fields": {
+    "name": "Zapadne Tatry",
+    "slug": "zapadne-tatry3",
+    "created_by": 1,
+    "category": 3,
+    "author": "admin",
+    "description": "",
+    "photo": 8,
+    "price": "14.99",
+    "stock": 1,
+    "in_stock": true,
+    "is_active": true,
+    "created": "2023-04-15T15:07:14.943Z",
+    "updated": "2023-04-15T15:07:14.943Z"
+  }
+},
+{
+  "model": "photos_web.product",
+  "pk": 5,
+  "fields": {
+    "name": "Trolltunga",
+    "slug": "trolltunga",
+    "created_by": 1,
+    "category": 1,
+    "author": "admin",
+    "description": "",
+    "photo": 2,
+    "price": "12.99",
+    "stock": 0,
+    "in_stock": true,
+    "is_active": true,
+    "created": "2023-04-15T15:33:59.270Z",
+    "updated": "2023-04-15T15:33:59.270Z"
+  }
+},
+{
+  "model": "photos_web.product",
+  "pk": 6,
+  "fields": {
+    "name": "Zapadne Tatry",
+    "slug": "zapadne-tatry5",
+    "created_by": 1,
+    "category": 3,
+    "author": "admin",
+    "description": "",
+    "photo": 9,
+    "price": "12.99",
+    "stock": 0,
+    "in_stock": true,
+    "is_active": true,
+    "created": "2023-04-15T16:01:30.892Z",
+    "updated": "2023-04-15T16:01:30.892Z"
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 7,
+  "fields": {
+    "user": 13,
+    "email": "swipe47555@gmail.com",
+    "verified": false,
+    "primary": false
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 8,
+  "fields": {
+    "user": 13,
+    "email": "swipe47@gmail.com",
+    "verified": true,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 9,
+  "fields": {
+    "user": 14,
+    "email": "juraj@dobry.sk",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 10,
+  "fields": {
+    "user": 15,
+    "email": "jh@jkj.sk",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 11,
+  "fields": {
+    "user": 16,
+    "email": "rotunda@gmail.com",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 12,
+  "fields": {
+    "user": 25,
+    "email": "denisa@pukac.sk",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 13,
+  "fields": {
+    "user": 26,
+    "email": "Blanka@mandik.sk",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 14,
+  "fields": {
+    "user": 27,
+    "email": "Sw47@ail.com",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 15,
+  "fields": {
+    "user": 28,
+    "email": "sip@pali.sk",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 16,
+  "fields": {
+    "user": 29,
+    "email": "skuaska@as.sk",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 17,
+  "fields": {
+    "user": 30,
+    "email": "sasa@gm.sk",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 18,
+  "fields": {
+    "user": 31,
+    "email": "scazxzxs@csdxz.sk",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 19,
+  "fields": {
+    "user": 32,
+    "email": "sdadas@sxzc.sk",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 20,
+  "fields": {
+    "user": 33,
+    "email": "ado@ado.sk",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 21,
+  "fields": {
+    "user": 34,
+    "email": "csdxcds@scdxcsx.sk",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 22,
+  "fields": {
+    "user": 35,
+    "email": "hugo@gmail.com",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 23,
+  "fields": {
+    "user": 36,
+    "email": "dodo@drumach.sk",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 24,
+  "fields": {
+    "user": 37,
+    "email": "skusto@sk.sk",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 25,
+  "fields": {
+    "user": 38,
+    "email": "aho@gmail.com",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 26,
+  "fields": {
+    "user": 39,
+    "email": "ahol@gmail.sk",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 27,
+  "fields": {
+    "user": 40,
+    "email": "hugo2@gmail.com",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 28,
+  "fields": {
+    "user": 41,
+    "email": "swipe32@g.sk",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 29,
+  "fields": {
+    "user": 42,
+    "email": "hugo24@gmail.com",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 30,
+  "fields": {
+    "user": 43,
+    "email": "Swipe47x@gmail.com",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 31,
+  "fields": {
+    "user": 44,
+    "email": "Blanka@mandik22.sk",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "socialaccount.socialapp",
+  "pk": 1,
+  "fields": {
+    "provider": "google",
+    "name": "Google login",
+    "client_id": "376882676662-00ntoq3cb1ou7nt1psmsu66f4ihj6kf4.apps.googleusercontent.com",
+    "secret": "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",
+    "key": "",
+    "sites": [
+      2
+    ]
+  }
+},
+{
+  "model": "socialaccount.socialaccount",
+  "pk": 9,
+  "fields": {
+    "user": 13,
+    "provider": "google",
+    "uid": "107375441452513752587",
+    "last_login": "2023-04-15T07:35:16.248Z",
+    "date_joined": "2023-04-07T19:10:12.525Z",
+    "extra_data": "{\"iss\": \"https://accounts.google.com\", \"azp\": \"376882676662-00ntoq3cb1ou7nt1psmsu66f4ihj6kf4.apps.googleusercontent.com\", \"aud\": \"376882676662-00ntoq3cb1ou7nt1psmsu66f4ihj6kf4.apps.googleusercontent.com\", \"sub\": \"107375441452513752587\", \"email\": \"swipe47@gmail.com\", \"email_verified\": true, \"at_hash\": \"YwupHmVzvBrjYGupYodJLg\", \"name\": \"Lukas Mandik\", \"picture\": \"https://lh3.googleusercontent.com/a/AGNmyxZXa9aa1xpv5XDR63w0CRS6KYKkvQ8iBxYD7v2y=s96-c\", \"given_name\": \"Lukas\", \"family_name\": \"Mandik\", \"locale\": \"sk\", \"iat\": 1681544116, \"exp\": 1681547716}"
+  }
+}
+]
