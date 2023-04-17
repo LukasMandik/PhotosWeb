@@ -1,16 +1,52 @@
 {% extends 'base.html' %}
-{% block title %}Photo{% endblock %}
 {% load static %}
 {% block content %}
+<div class="container_product_detail">
+    <div class="photo_detail">
+        <img src="{{ product.photo.png_image.url }}">
+        <div class="mini_photos">
+<!--            <img src="{{ product.photo.png_image.url }}">-->
+<!--            <img src="{{ product.photo.png_image.url }}">-->
+<!--            <img src="{{ product.photo.png_image.url }}">-->
+            <div class="original_mini_photo">
+                <img src="{{ product.photo.png_image.url }}">
+            </div>
+            <div class="sample_mini_photo">
+                <div class="sample_photo1" >
+               <img src="{% static 'media/livingroom4.png' %}">
+                <div class="inner_sample_photo">
+                    <img src="{{ product.photo.png_image.url }}">
+                </div>
+                </div>
+            </div>
 
-<div class="container_photo">
-<!--    <a href="{{ photo.png_image.url }}">-->
+        </div>
+    </div>
 
-    <img src="{{ product.photo.png_image.url }}">
-    <p>{{ product.description }}</p>
-    <p>{{ product.price }}</p>
-    <a href="/store/products_gallery/">Go back</a>
+    <div class="print_options">
+        <div class="size_options">
+            <label for="size">Choose size:</label>
+            <select id="size" name="size">
+                <option value="200x300">200x300</option>
+                <option value="300x400">300x400</option>
+                <option value="400x500">400x500</option>
+            </select>
+        </div>
+
+        <div class="type_options">
+            <label for="type_options">Choose type print:</label>
+            <select id="type_options" name="type_options">
+                <option value="Print">Print</option>
+                <option value="Frame">Frame</option>
+                <option value="Canvas">Canvas</option>
+                <option value="Hard Print">Hard Print</option>
+            </select>
+        </div>
+        <a href="/store/products_gallery/">Go back</a>
+    </div>
+
+    <div class="summary">
+        <p>Price: {{ product.price }} €</p>
+    </div>
 </div>
-
-
 {% endblock %}
