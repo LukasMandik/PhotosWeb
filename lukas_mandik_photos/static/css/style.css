@@ -45,7 +45,7 @@ body{
 }
 
 /*Navbar*/
-.navbar{
+.main_navbar{
 	width: 100%;
 	height: 130px;
 	background: var(--primary-color2);
@@ -63,7 +63,7 @@ body{
 /*}*/
 
 
-.navbar.small {
+.main_navbar.small {
   	height: 50px;
   /*display: none;*/
 	background-color: transparent;
@@ -83,7 +83,7 @@ body{
 
 
 
-.navbar .inner_navbar{
+.main_navbar .inner_navbar{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -91,28 +91,28 @@ body{
 	height: 100%;
 }
 
-.navbar .hamburger{
+.main_navbar .hamburger{
 	display: none;
 }
 
-.navbar .logo a{
+.main_navbar .logo a{
 }
 
 
-.navbar .logo img{
+.main_navbar .logo img{
 	width: 12rem;
 	margin: 0 2rem;
 }
 
-.navbar .menu ul{
+.main_navbar .menu ul{
 	display: flex;
 }
 
-.navbar .menu ul li{
-	margin: 0 30px;
+.main_navbar .menu ul li{
+	margin: 0 20px;
 }
 
-.navbar .menu ul li a{
+.main_navbar .menu ul li a{
 	/*width: 8rem;*/
 	margin: 2px 5px;
 	display: block;
@@ -124,7 +124,7 @@ body{
 	font-size: 0.72rem;
 }
 
-.navbar .menu ul li::after{
+.main_navbar .menu ul li::after{
 	content: '';
 	width: 0;
 	height: 2px;
@@ -134,7 +134,7 @@ body{
 	margin: auto;
 	transition: 0.5s;
 }
-.navbar .menu ul li:hover::after{
+.main_navbar .menu ul li:hover::after{
 	width: 100%;
 }
 
@@ -1138,11 +1138,11 @@ footer p {
 
 
 
-	.navbar{
+	.main_navbar{
 		height: 170px;
 		padding: 12px;
 	}
-	.navbar .inner_navbar{
+	.main_navbar .inner_navbar{
 		flex-direction: column;
 		justify-content: center;
 	}
@@ -1156,17 +1156,17 @@ footer p {
 
 @media (max-width: 728px) {
 
-	.navbar .logo img {
+	.main_navbar .logo img {
 		width: 10rem;
 		margin: 0 1rem;
 	}
 
-	.navbar {
+	.main_navbar {
 		height: 100px;
 	}
 
 
-	.navbar .inner_navbar {
+	.main_navbar .inner_navbar {
 		flex-direction: row;
 	}
 
@@ -1175,7 +1175,7 @@ footer p {
 
 	}
 
-	.navbar .menu ul {
+	.main_navbar .menu ul {
 		position: absolute;
 		top: 60px;
 		left: 0;
@@ -1184,17 +1184,17 @@ footer p {
 		width: 100%;
 	}
 
-	.navbar .menu ul li {
+	.main_navbar .menu ul li {
 		padding-bottom: 10px;
 	}
 
-	.navbar .menu ul li a {
+	.main_navbar .menu ul li a {
 		width: 100%;
 		margin: 0px 0px;
 		padding: 12px;
 	}
 
-	.navbar .hamburger {
+	.main_navbar .hamburger {
 		display: block;
 		position: absolute;
 		/*top: 15px;*/
@@ -1205,15 +1205,15 @@ footer p {
 		transition: all 0.2s ease;
 	}
 
-	.navbar .hamburger:hover {
+	.main_navbar .hamburger:hover {
 		color: var(--primary-color3);
 	}
 
-	.navbar .menu {
+	.main_navbar .menu {
 		display: none;
 	}
 
-	.navbar .menu.active {
+	.main_navbar .menu.active {
 		display: block;
 	}
 

@@ -14,16 +14,23 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.apps import apps
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path("pages/", include("django.contrib.flatpages.urls")),
+
     path('admin/', admin.site.urls),
+    path('i18n/', include('django.conf.urls.i18n')), # urls for multi language
     # photo_web app
     path('', include('photos_web.urls')),
-    # Add this line
+
     path('accounts/', include('allauth.urls')),
+
+    path('', include(apps.get_app_config('oscar').urls[0])), # oscar url
+
 ]
 
 if settings.DEBUG:

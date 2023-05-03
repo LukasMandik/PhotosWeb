@@ -22,7 +22,7 @@ let menu = document.querySelector(".menu");
 
 
 
-var navBar = document.querySelector(".navbar"); // vyberte navigačný panel
+var navBar = document.querySelector(".main_navbar"); // vyberte navigačný panel
 var offset = 70; // nastavte hodnotu posunu, po ktorom sa zmení veľkosť
 var scrollPos = 0; // uložte aktuálnu pozíciu scrollovania
 

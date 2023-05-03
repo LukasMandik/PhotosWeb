@@ -9,7 +9,9 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-from lukas_mandik_photos import env
+import os
+# after import os
+from oscar.defaults import *
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -39,16 +41,56 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'django.contrib.sites',
+    'django.contrib.flatpages',
+    'django_countries',
 
     'photos_web',
-
     'livereload',
 
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+
+    'oscar',
+    'oscar.apps.analytics',
+    'oscar.apps.checkout',
+    'oscar.apps.address',
+    'oscar.apps.shipping',
+    # 'oscar.apps.catalogue',
+    'lukas_mandik_photos.catalogue.apps.CatalogueConfig',
+    'oscar.apps.catalogue.reviews',
+    'oscar.apps.partner',
+    'oscar.apps.basket',
+    'oscar.apps.payment',
+    'oscar.apps.offer',
+    'oscar.apps.order',
+    'oscar.apps.customer',
+    'oscar.apps.search',
+    'oscar.apps.voucher',
+    'oscar.apps.wishlists',
+    'oscar.apps.communication',
+    'oscar.apps.dashboard',
+    'oscar.apps.dashboard.reports',
+    'oscar.apps.dashboard.users',
+    'oscar.apps.dashboard.orders',
+    'oscar.apps.dashboard.catalogue',
+    'oscar.apps.dashboard.offers',
+    'oscar.apps.dashboard.partners',
+    'oscar.apps.dashboard.pages',
+    'oscar.apps.dashboard.ranges',
+    'oscar.apps.dashboard.reviews',
+    'oscar.apps.dashboard.vouchers',
+    'oscar.apps.dashboard.communications',
+    'oscar.apps.dashboard.shipping',
+    # 3rd-party apps that oscar depends on
+    'widget_tweaks',
+    'haystack',
+    'treebeard',
+    'sorl.thumbnail',
+    'django_tables2',
 ]
 
 SITE_ID = 2
@@ -63,6 +105,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'oscar.apps.basket.middleware.BasketMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 ]
 
 ROOT_URLCONF = 'lukas_mandik_photos.urls'
@@ -80,6 +125,11 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 # `allauth` needs this from django
                 'django.template.context_processors.request',
+                # oscars context processors
+                'oscar.apps.search.context_processors.search_form',
+                'oscar.apps.checkout.context_processors.checkout',
+                'oscar.apps.communication.notifications.context_processors.notifications',
+                'oscar.core.context_processors.metadata',
             ],
         },
     },
@@ -92,6 +142,9 @@ AUTHENTICATION_BACKENDS = [
 
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
+
+    'oscar.apps.customer.auth_backends.EmailBackend',
+    'django.contrib.auth.backends.ModelBackend',
 
 ]
 WSGI_APPLICATION = 'lukas_mandik_photos.wsgi.application'
@@ -109,11 +162,11 @@ WSGI_APPLICATION = 'lukas_mandik_photos.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env.db_name,
-        'USER': env.db_username,
-        'PASSWORD': env.db_password,
-        'HOST': env.db_host,
-        'PORT': env.db_port,
+        'NAME': 'lukasmandik',
+        'USER': 'postgres',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -203,3 +256,49 @@ ACCOUNT_FORMS = {
 
 
 # ACCOUNT_SIGNUP_FORM_CLASS = 'photos_web.forms.CustomSignupForm'
+
+
+# OSCAR_REQUIRED_ADDRESS_FIELDS = (
+#     'first_name', 'last_name', 'line1', 'line4', 'postcode', 'country'
+# )
+# OSCAR_DYNAMIC_CLASS_LOADER = 'oscar.core.loading.default_class_loader'
+# OSCAR_DEFAULT_CURRENCY = 'USD'
+# OSCAR_SLUG_FUNCTION = 'oscar.core.utils.default_slugifier'
+# OSCAR_SLUG_MAP = ()
+# OSCAR_SLUG_BLACKLIST = ()
+# OSCAR_SLUG_ALLOW_UNICODE = True
+# OSCAR_ALLOW_ANON_CHECKOUT = False
+# OSCAR_EAGER_ALERTS = False
+# OSCAR_DELETE_IMAGE_FILES = True
+# OSCAR_PRODUCTS_PER_PAGE = 20  # Alebo akúkoľvek inú hodnotu, ktorú chcete nastaviť
+# OSCAR_OFFERS_PER_PAGE = 20  # Alebo akúkoľvek inú hodnotu, ktorú chcete nastaviť
+# OSCAR_REVIEWS_PER_PAGE = 10  # Alebo akúkoľvek inú hodnotu, ktorú chcete nastaviť
+# OSCAR_RECENTLY_VIEWED_COOKIE_NAME = 'recently_viewed_products'  # Alebo akýkoľvek iný názov cookie, ktorý chcete použiť
+# OSCAR_RECENTLY_VIEWED_COOKIE_LIFETIME = 1209600
+# OSCAR_RECENTLY_VIEWED_COOKIE_SECURE = False  # Alebo True, ak chcete, aby sa cookie odosielali iba cez HTTPS
+# OSCAR_RECENTLY_VIEWED_PRODUCTS = 20
+# OSCAR_SEARCH_FACETS = {
+#     'fields': {
+#         # ...
+#     },
+#     'queries': {},
+# }
+# OSCAR_SLUG_MAP = {}  # prípadne prispôsobte hodnoty podľa potreby
+# OSCAR_SLUG_BLACKLIST = {}  # prípadne prispôsobte hodnoty podľa potreby
+
+
+HAYSTACK_CONNECTIONS = {
+   'default': {
+        'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
+   },
+}
+COUNTRY_CODE = 'SK'
+CURRENCY_CODE = 'EUR'
+
+COUNTRIES_FIRST = True
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+{% extends "oscar/checkout/checkout.html" %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Payment details" %} | {{ block.super }}
+{% endblock %}
+
+{% block checkout_nav %}
+    {% include 'oscar/checkout/nav.html' with step=3 %}
+{% endblock %}
+
+{% block checkout_title %}{% trans "Enter payment details" %}{% endblock %}
+
+{% block order_contents %}{% endblock %}
+{% block shipping_address %}{% endblock %}
+{% block shipping_method %}{% endblock %}
+{% block payment_method %}{% endblock %}
+
+{% block payment_details %}
+    {% block payment_details_content %}
+      <form action="{% url 'checkout:preview' %}" method="post" id="stripe-form">
+        {% csrf_token %}
+        <div id="card-element"></div>
+            <style>
+    #card-element {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: blanchedalmond;
+    }
+  </style>
+        <button type="submit">{% trans "Pay" %}</button>
+      </form>
+    {% endblock payment_details_content %}
+{% endblock payment_details %}
+
+
+
+{% block extra_js %}
+  <script src="https://js.stripe.com/v3/"></script>
+  <script>
+    const stripe = Stripe('pk_test_51MyGsrBPmdTNWuFncQjYDhhXP0TptPzd3YlkIPZjmR08pa6KpJSHLoIWIUzGJbD7WKNwnDRa54nB4OYMzURkjqyn00xi4750W1');
+    const elements = stripe.elements();
+    const card = elements.create('card');
+    card.mount('#card-element');
+
+    const form = document.getElementById('stripe-form');
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const { token, error } = await stripe.createToken(card);
+
+      if (error) {
+        console.error('Error creating Stripe token:', error);
+        return;
+      }
+
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = 'stripeToken';
+      input.value = token.id;
+      form.appendChild(input);
+
+      form.submit();
+    });
+  </script>
+{% endblock extra_js %}

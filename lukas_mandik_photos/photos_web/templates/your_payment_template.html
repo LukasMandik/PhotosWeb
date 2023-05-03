@@ -1,0 +1,36 @@
+<!-- your_payment_template.html -->
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    const stripe = Stripe('{{ STRIPE_PUBLIC_KEY }}');
+</script>
+<!-- your_payment_template.html -->
+...
+<form id="payment-form">
+    <div id="card-element">
+        <!-- Stripe.js will insert the card input fields here -->
+    </div>
+    <button id="submit">Pay</button>
+</form>
+<!-- your_payment_template.html -->
+...
+<script>
+    const cardElement = document.getElementById('card-element');
+    const paymentForm = document.getElementById('payment-form');
+    const card = stripe.elements().create('card');
+    card.mount(cardElement);
+
+    paymentForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const { paymentIntent, error } = await stripe.createPaymentMethod({
+            type: 'card',
+            card: card,
+        });
+
+        if (error) {
+            // Handle error
+        } else {
+            // Process the payment
+        }
+    });
+</script>
