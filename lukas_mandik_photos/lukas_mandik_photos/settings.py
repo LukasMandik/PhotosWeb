@@ -164,7 +164,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'lukasmandik',
         'USER': 'postgres',
-        'PASSWORD': '',
+        'PASSWORD': '660747',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -298,7 +298,8 @@ CURRENCY_CODE = 'EUR'
 COUNTRIES_FIRST = True
 
 
-
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51MyGsrBPmdTNWuFncQjYDhhXP0TptPzd3YlkIPZjmR08pa6KpJSHLoIWIUzGJbD7WKNwnDRa54nB4OYMzURkjqyn00xi4750W1'
+STRIPE_SECRET_KEY = 'sk_test_51MyGsrBPmdTNWuFnQq4EBaezlsCY1jL6ekZqX0pCPsP5rgXjKuoQdnWlZ1xZPVde64soYFRRCV6p1tQ7bySfQTwc00MHq36vWH'
 
 
 

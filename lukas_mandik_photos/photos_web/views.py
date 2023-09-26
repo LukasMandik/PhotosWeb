@@ -26,17 +26,28 @@ def hello_world(request):
 
 
 def home(request):
-    photos = Photo.objects.all()
+    photos = Photo.objects.filter(image_name="_DSC4061.jpg")
     top_likes_photos = Photo.objects.annotate(like_count=Count('likes')).order_by('-likes')[:3]
 
-    if photos:
-        random_ids = random.sample([p.id for p in photos], min(len(photos), 3))
-        photos = Photo.objects.filter(id__in=random_ids)
+    # if photos:
+    #     random_ids = random.sample([p.id for p in photos], min(len(photos), 3))
+    #     photos = Photo.objects.filter(id__in=random_ids)
 
     home_photo = Photo.objects.filter(image_name="_DSC5009.jpg").first
+
+    # Vyberie všetky produkty
+    all_products = list(Product.objects.all())
+
+    # Premieša zoznam produktov
+    random.shuffle(all_products)
+
+    # Vyberie prvých tri produkty z premiešaného zoznamu
+    random_products = all_products[:3]
+
     context = {'photos': photos,
                'home_photo': home_photo,
-               'top_likes_photos': top_likes_photos}
+               'top_likes_photos': top_likes_photos,
+               'random_products': random_products,}
     return render(request, 'home.html', context)
 
 

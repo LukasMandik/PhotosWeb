@@ -12,75 +12,110 @@
 
     <div class="slideshow-container">
         {% for photo in photos %}
-        <div class="mySlides fade">
-            <img src="{{photo.image.url}}">
-            <div class="text">{{ photo.name }}</div>
-        </div>
-        {% endfor %}
-        <div class="row_dot" style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
+        <span class="paralax-slideshow">
+            <div class="mySlides fade">
+                <img src="{{photo.image.url}}">
+                <div class="text">{{ photo.name }}</div>
+            </div>
+            {% endfor %}
+<!--            <div class="row_dot" style="text-align:center">-->
+<!--                <span class="dot" onclick="currentSlide(1)"></span>-->
+<!--                <span class="dot" onclick="currentSlide(2)"></span>-->
+<!--                <span class="dot" onclick="currentSlide(3)"></span>-->
+<!--            </div>-->
+<!--            <a class="prev" onclick="plusSlides(-1)">❮</a>-->
+<!--            <a class="next" onclick="plusSlides(1)">❯</a>-->
+        </span>
     </div>
 
     <div class="home_container">
         {% if request.user.is_authenticated %}
             <div class="left_home_container">
-                <div class="title_home_container"><h2>Welcome on page!</h2></div>
-                <div class="item_home_container">
-                    <p>{{ request.user.first_name }}, here you can explore the beauty of nature through my lens. My photos capture stunning landscapes, breathtaking mountain ranges, and serene bodies of water. From majestic sunsets to vibrant autumn foliage, every photo tells a unique story.</p>
-                    <p>I have taken these photos on various hikes, expeditions, and camping trips across different mountain ranges. I love to spend time in the wilderness and capture the beauty of nature around me.</p>
-                    <p>Take a moment to browse through my gallery and discover the wonder and tranquility of the great outdoors.</p>
-                </div>
-            </div>
-        <div class="duble_container">
-            <div class="right_home_container hidden">
-                <div class="title_home_container"><h2>About me</h2></div>
-                <img src="{{ home_photo.image.url }}" alt="{{ home_photo.name }}">
-                <div class="item_home_container">
-                    <p>Here you can explore the beauty of nature through my lens. My photos capture stunning landscapes, breathtaking mountain ranges, and serene bodies of water. From majestic sunsets to vibrant autumn foliage, every photo tells a unique story.</p>
-                    <p>I have taken these photos on various hikes, expeditions, and camping trips across different mountain ranges. I love to spend time in the wilderness and capture the beauty of nature around me.</p>
-                    <p>Take a moment to browse through my gallery and discover the wonder and tranquility of the great outdoors.</p>
-                </div>
+<!--                <span class="paralax-slideshow">-->
+<!--                <div class="title_home_container">-->
+<!--                    <h2>Explore the beauty of nature</h2>-->
+<!--                </div>-->
+<!--                <div class="item_home_container">-->
+<!--&lt;!&ndash;                    <p>{{ request.user.first_name }}, here you can explore the beauty of nature through my lens. My photos capture stunning landscapes, breathtaking mountain ranges, and serene bodies of water. From majestic sunsets to vibrant autumn foliage, every photo tells a unique story.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <p>I have taken these photos on various hikes, expeditions, and camping trips across different mountain ranges. I love to spend time in the wilderness and capture the beauty of nature around me.</p>&ndash;&gt;-->
+<!--                    <p class="title">Take a moment to browse through my gallery and discover the wonder and tranquility of the great outdoors.</p>-->
+<!--                </div>-->
+<!--                </span>-->
             </div>
 
-            <div class="down_home_container hidden2">
-                <div class="title_home_container">
-                    <h2>Top liked</h2>
+            {% block store %}
+     <div class="container">
+        <h2> Choose your piece of nature </h2>
+        <div class="samples_container">
+            <div class="sample_photo1" >
+                <a href="/store/products_gallery/"><img src="{% static 'media/livingroom4.png' %}"></a>
+                <div class="inner_sample_photo">
+                    <img src="{{random_products.0.photo.image.url}}">
                 </div>
-                {% for photo in top_likes_photos %}
-                <div class="gallery-container">
-                    <div class="gallery-item">
-                        <div class="image">
-                            <a href="{{ photo.get_absolute_url }}">
-                                <img src="{{photo.png_image.url}}" alt="{{ photo.name }}">
-                            </a>
-                        </div>
-                        <div class="gallery-text">
-                            <div><i class="fas fa-share-alt"></i></div>
-                            <div><p>{{ photo.category }}</p></div>
-                            <button class="like-button" onclick="likePhoto({{ photo.id }});">
-                            <span id="like-count-{{ photo.id }}">{{ photo.likes }}</span> x
-                            <i class="fas fa-heart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                {% empty %}
-                <p>empty</p>
-                {% endfor %}
             </div>
-            {% else %}
-                <div class="item_home_container">
-                    <p>You are not logged in.</p>
-                    <p>The beauty of nature captured through the lens. Explore stunning landscapes, breathtaking mountain ranges, and serene bodies of water. From majestic sunsets to vibrant autumn foliage, every photo tells a story. Discover the wonder and tranquility of the great outdoors.</p>
+            <div class="sample_photo2">
+                <img src="{% static 'media/livingroom2.png' %}">
+                <div class="inner_sample_photo2">
+                    <img src="{{random_products.1.photo.png_image.url}}">
                 </div>
-            {% endif %}
+            </div>
+            <div class="sample_photo3">
+                <img src="{% static 'media/livingroom6.png'%}">
+                <div class="inner_sample_photo3">
+                    <img src="{{random_products.2.photo.image.url}}">
+                </div>
+            </div>
         </div>
     </div>
+
+{% endblock %}
+
+            <div class="duble_container">
+                <div class="right_home_container hidden">
+                    <div class="title_home_container"><h2>About me</h2></div>
+                    <img src="{{ home_photo.image.url }}" alt="{{ home_photo.name }}">
+                    <div class="item_home_container">
+                        <p>Here you can explore the beauty of nature through my lens. My photos capture stunning landscapes, breathtaking mountain ranges, and serene bodies of water. From majestic sunsets to vibrant autumn foliage, every photo tells a unique story.</p>
+                        <p>I have taken these photos on various hikes, expeditions, and camping trips across different mountain ranges. I love to spend time in the wilderness and capture the beauty of nature around me.</p>
+                        <p>Take a moment to browse through my gallery and discover the wonder and tranquility of the great outdoors.</p>
+                    </div>
+                </div>
+
+                <div class="down_home_container hidden2">
+                    <div class="title_home_container">
+                        <h2>Top liked</h2>
+                    </div>
+                    {% for photo in top_likes_photos %}
+                    <div class="gallery-container">
+                        <div class="gallery-item">
+                            <div class="image">
+                                <a href="{{ photo.get_absolute_url }}">
+                                    <img src="{{photo.png_image.url}}" alt="{{ photo.name }}">
+                                </a>
+                            </div>
+                            <div class="gallery-text">
+                                <div><i class="fas fa-share-alt"></i></div>
+                                <div><p>{{ photo.category }}</p></div>
+                                <button class="like-button" onclick="likePhoto({{ photo.id }});">
+                                <span id="like-count-{{ photo.id }}">{{ photo.likes }}</span> x
+                                <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    {% empty %}
+                    <p>empty</p>
+                    {% endfor %}
+                </div>
+                {% else %}
+                    <div class="item_home_container">
+                        <p>You are not logged in.</p>
+                        <p>The beauty of nature captured through the lens. Explore stunning landscapes, breathtaking mountain ranges, and serene bodies of water. From majestic sunsets to vibrant autumn foliage, every photo tells a story. Discover the wonder and tranquility of the great outdoors.</p>
+                    </div>
+                {% endif %}
+            </div>
+    </div>
+
 
 </div>
 
@@ -158,13 +193,35 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-// Automatické prechádzanie fotiek
-function autoSlides() {
-  plusSlides(1);
-}
-
-let autoSlidesInterval = setInterval(autoSlides, 5000); // Zmena fotiek každé 2 sekundy (2000 ms)
+// // Automatické prechádzanie fotiek
+// function autoSlides() {
+//   plusSlides(1);
+// }
+//
+// let autoSlidesInterval = setInterval(autoSlides, 5000); // Zmena fotiek každé 2 sekundy (2000 ms)
 </script>
 
+<script>
+let didScroll = false;
+let paralaxTitles = document.querySelectorAll('.paralax-slideshow');
+
+const scrollInProgress = () => {
+	didScroll = true;
+}
+
+const raf = () => {
+	if (didScroll) {
+		paralaxTitles.forEach((element, index) => {
+			element.style.transform = "translateY(-" + window.scrollY / 8 + "%)";
+		});
+		didScroll = false;
+	}
+	requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+window.addEventListener('scroll', scrollInProgress);
+
+</script>
 
 {% endblock %}

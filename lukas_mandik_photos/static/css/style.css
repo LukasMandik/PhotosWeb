@@ -44,11 +44,24 @@ body{
 	/*min-height: 900px;*/
 }
 
+.my_variant{
+    width: 120px;
+    height: 130px;
+    background-color: rgba(59, 59, 59, 0.70);
+    }
+
+
 /*Navbar*/
 .main_navbar{
 	width: 100%;
 	height: 130px;
-	background: var(--primary-color2);
+	background-color: rgba(59, 59, 59, 0.70);
+	/*backdrop-filter: blur(5px);*/
+	backface-visibility: hidden;
+	transform: translateZ(0px);
+	-webkit-backdrop-filter: blur(5px) saturate(1.2);
+	backdrop-filter: blur(5px) saturate(1.2);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -208,10 +221,19 @@ li.dropdown{
 	flex-wrap: wrap;
 }
 .left_home_container{
+	position: absolute;
+	top: 30vh;
 	width: 80%;
-	background-color: rgba(168, 168, 168, 0.1);
+	background-color: rgba(59, 59, 59, 0.07);
+	/*backdrop-filter: blur(5px);*/
+	backface-visibility: hidden;
+	transform: translateZ(0px);
+	-webkit-backdrop-filter: blur(5px) saturate(1.2);
+	backdrop-filter: blur(5px) saturate(1.2);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
 	margin: 20px 5px;
-	border-radius: 5px;
+	border-radius: 15px;
+	color: rgba(224, 224, 224, 0.88);
 
 }
 .duble_container{
@@ -222,6 +244,7 @@ li.dropdown{
 .down_home_container{
 	flex: 1 1 ;
 	position: relative;
+	width: 100px;
 	transform: translateX(0);
   	transition: opacity 1s, transform 1s;
 	background-color: rgba(168, 168, 168, 0.1);
@@ -292,6 +315,8 @@ li.dropdown{
     left: -200px;
 	object-position: 50% 50%;
     transition: 1s;
+	font-size: 40px;
+	font-weight: lighter;
 }
 
 .title_home_container h2.centered {
@@ -299,6 +324,11 @@ li.dropdown{
 	opacity: 1;
 }
 
+
+	span {
+		position: relative;
+		display: block;
+	}
 
 
 .item_home_container{
@@ -314,6 +344,11 @@ li.dropdown{
 	margin: 10px auto;
 	letter-spacing: 1px;
 	transition: 2s;
+}
+.title {
+	font-size: 22px;
+	font-weight: lighter;
+	font-family: 'Dosis', sans-serif;
 }
 .item_home_container p.centered{
 	opacity: 1;
@@ -496,11 +531,11 @@ li.dropdown{
 
 .mySlides {
 	display: none;
-	margin: 130px 0 0 0;
+	margin: 0 0 0 0;
 }
 .mySlides img{
 	vertical-align: middle;
-	height: 330px;
+	height: 100vh;
 	width: 100%;
 	object-fit: cover;
 
@@ -683,8 +718,13 @@ li.dropdown{
 	outline: 2px solid red;
 }
 
-
-
+.header {
+    display: flex;
+	flex-direction: column;
+    margin: 130px 0 0 0;
+    text-align: center;
+	z-index: 10;
+}
 
 
 .container{

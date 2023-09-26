@@ -12,36 +12,32 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="/">Home</a></li>
+<!--                    <li><a href="/">Home</a></li>-->
+                    <li><a href="/catalogue/">Shop</a></li>
                     <li><a href="/gallery">Gallery</a></li>
-<!--                    <li><a href="">Contact</a></li>-->
-                    <li><a href="/store/index/">Prints Shop</a></li>
-                    <li><a href="/accounts/login/">Login</a></li>
-                    {% if user.is_authenticated %}
-                    <li><a href="/logout">Odhlásiť sa</a></li>
                     <li><a href="{% url 'basket:summary' %}">
                         <i class="fas fa-shopping-cart"></i>
                         {% trans "Basket" %}
                         {% if not request.basket.is_empty %}
                             {% if request.basket.is_tax_known %}
                                 {% blocktrans with total=request.basket.total_incl_tax|currency:request.basket.currency %}
-                                    : {{ total }}
+                                : {{ total }}
                                 {% endblocktrans %}
-                            {% else %}
+                                {% else %}
                                 {% blocktrans with total=request.basket.total_excl_tax|currency:request.basket.currency %}
-                                    : {{ total }}
+                                : {{ total }}
                                 {% endblocktrans %}
                             {% endif %}
                         {% endif %}
                     </a></li>
+                    <!--                    <li><a href="">Contact</a></li>-->
+                    {% if not user.is_authenticated %}
+                    <li><a href="/accounts/login/">Login</a></li>
+                    {% else %}
+                    <li><a href="/logout">Logout</a></li>
                     {% endif %}
                 </ul>
             </div>
-
-
-
-
-
             <div class="hamburger">
                 <i class="fas fa-bars"></i>
             </div>

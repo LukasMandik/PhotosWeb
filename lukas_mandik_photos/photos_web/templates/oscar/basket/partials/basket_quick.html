@@ -20,7 +20,7 @@
                         </div>
                     </div>
                     <div class="col-sm-5">
-                        <p><strong><a href="{{ line.product.get_absolute_url }}">{{ line.description }}</a></strong></p>
+                        <p><strong><a href="{{ line.product.get_absolute_url }}">{% if line.product.is_child %} {{ line.product.parent.get_title }} - {% endif %} {{ line.description }}</a></strong></p>
                     </div>
                     <div class="col-sm-1 text-center"><strong>{% trans "Qty" %}</strong> {{ line.quantity }}</div>
                     <div class="col-sm-3 price_color text-right">{{ line.unit_price_excl_tax|currency:request.basket.currency }}</div>

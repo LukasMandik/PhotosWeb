@@ -49,12 +49,15 @@
                                 {% with image=product.primary_image %}
                                     {% oscar_thumbnail image.original "100x100" upscale=False as thumb %}
                                     <a href="{{ product.get_absolute_url }}">
-                                        <img class="img-thumbnail w-auto mx-auto my-0" src="{{ thumb.url }}" alt="{{ product.get_title }}"/>
+                                        <img class="img-thumbnail w-auto mx-auto my-0" src="{{ thumb.url }}" alt="{{ product.get_title }} "/>
                                     </a>
                                 {% endwith %}
                             </div>
                             <div class="col-md-4">
-                                <h3><a href="{{ product.get_absolute_url }}">{{ line.description }}</a></h3>
+                                <h3>
+                                    <a href="{{ product.get_absolute_url }}">{% if product.is_child %} {{ product.parent.get_title }} - {% endif %} {{ line.description }}</a>
+                                </h3>
+
                                 <p class="availability {{ session.availability.code }}">{{ session.availability.message }}</p>
                             </div>
                             <div class="col-md-3">

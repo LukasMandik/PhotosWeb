@@ -35,7 +35,7 @@ function scrollHandler() {
   if (currentScrollPos > scrollPos && currentScrollPos > offset) { // ak sme posunuli pod určitý bod
     navBar.classList.add("small"); // pridajte triedu pre menší navigačný panel
     navBar.style.transition = "all 0.5s ease-in-out"; // pridajte transition
-  } else if (currentScrollPos < (scrollPos - 7)) { // ak sme posunuli nad určitý bod
+  } else if (currentScrollPos < (scrollPos - 27)) { // ak sme posunuli nad určitý bod
     navBar.classList.remove("small"); // odstráňte triedu pre menší navigačný panel
     navBar.style.transition = "all 0.5s ease-in-out"; // pridajte transition
   }
