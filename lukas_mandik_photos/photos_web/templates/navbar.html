@@ -13,7 +13,8 @@
             <div class="menu">
                 <ul>
 <!--                    <li><a href="/">Home</a></li>-->
-                    <li><a href="/catalogue/">Shop</a></li>
+
+                    <li><a href="/catalogue/">Print Shop</a></li>
                     <li><a href="/gallery">Gallery</a></li>
                     <li><a href="{% url 'basket:summary' %}">
                         <i class="fas fa-shopping-cart"></i>
@@ -31,6 +32,32 @@
                         {% endif %}
                     </a></li>
                     <!--                    <li><a href="">Contact</a></li>-->
+                    {% if user.is_authenticated %}
+                        <li class="nav-item mr-2">
+                            {% if num_unread_notifications > 0 %}
+                                {# If user has new notifications - we change account link to go to inbox #}
+                                <a href="{% url 'customer:notifications-inbox' %}" class="">
+                                    <i class="far fa-user mr-2"></i>
+                                    {% trans "Account" %}
+                                    <span class="badge badge-warning">{{ num_unread_notifications }}</span>
+                                </a>
+                            {% else %}
+                                <a href="{% url 'customer:summary' %}" class="">
+                                    <i class="far fa-user mr-2"></i>
+                                    {% trans "Account" %}
+                                </a>
+                            {% endif %}
+                        </li>
+                    {% endif %}
+
+                    {% if user.is_staff or perms.partner.dashboard_access %}
+                        <li class="">
+                            <a href="{% url 'dashboard:index' %}" class="">
+                                <i class="fas fa-list-ul mr-2"></i>
+                                {% trans "Dashboard" %}
+                            </a>
+                        </li>
+                    {% endif %}
                     {% if not user.is_authenticated %}
                     <li><a href="/accounts/login/">Login</a></li>
                     {% else %}

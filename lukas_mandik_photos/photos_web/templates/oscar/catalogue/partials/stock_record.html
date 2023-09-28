@@ -6,24 +6,24 @@
 
 {% if session.price.exists %}
     {% if session.price.excl_tax == 0 %}
-        <p class="price_color">{% trans "Free" %}</p>
+        <p class="my_price_color">{% trans "Free" %}</p>
     {% elif session.price.is_tax_known %}
-        <p class="price_color">{{ session.price.incl_tax|currency:session.price.currency }}</p>
+        <p class="my_price_color">{{ session.price.incl_tax|currency:session.price.currency }}</p>
     {% else %}
-        <p class="price_color">{{ session.price.excl_tax|currency:session.price.currency }}</p>
+        <p class="my_price_color">{{ session.price.excl_tax|currency:session.price.currency }}</p>
     {% endif %}
 {% else %}
-    <p class="price_color">&nbsp;</p>
+    <p class="my_price_color">&nbsp;</p>
 {% endif %}
-<p class="{{ session.availability.code }} availability">
-    {% if session.availability.is_available_to_buy %}
-        <i class="fas fa-check-circle"></i>
-    {% else %}
-        <i class="fas fa-ban"></i>
-    {% endif %}
-    {% if verbose %}
-        {{ session.availability.message }}
-    {% else %}
-        {{ session.availability.short_message }}
-    {% endif %}
-</p>
+<!--<p class="{{ session.availability.code }} availability">-->
+<!--    {% if session.availability.is_available_to_buy %}-->
+<!--        <i class="fas fa-check-circle"></i>-->
+<!--    {% else %}-->
+<!--        <i class="fas fa-ban"></i>-->
+<!--    {% endif %}-->
+<!--    {% if verbose %}-->
+<!--        {{ session.availability.message }}-->
+<!--    {% else %}-->
+<!--        {{ session.availability.short_message }}-->
+<!--    {% endif %}-->
+<!--</p>-->

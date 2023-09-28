@@ -22,11 +22,20 @@
 {% block column_left %}
     {% category_tree as tree_categories %}
     {% if tree_categories %}
-        <h4>{% trans "Show results for" %}</h4>
-        <div class="side_categories card card-body bg-light">
-            <ul class="nav nav-list flex-column">
+<!--        <h4>{% trans "Show results for" %}</h4>-->
+        <div class="barlist">
+            <ul class="">
+                <li class="">
+                    <a href="/catalogue">
+                        {% if tree_category.pk == category.pk %}
+                            <strong>All</strong>
+                        {% else %}
+                            All
+                        {% endif %}
+                    </a>
+                </li>
                 {% for tree_category in tree_categories %}
-                    <li class="mt-2">
+                    <li class="">
                         <a href="{{ tree_category.url }}">
                             {% if tree_category.pk == category.pk %}
                                 <strong>{{ tree_category.name }}</strong>
@@ -56,7 +65,7 @@
 {% endblock %}
 
 {% block content %}
-
+<div>
     <form method="get">
         {# Render other search params as hidden inputs #}
         {% for value in selected_facets %}
@@ -92,10 +101,10 @@
 
     {% if products %}
         <section>
-            <div>
-                <ol class="row list-unstyled ml-0 pl-0">
+            <div class="shop-catalog">
+                <ol class="">
                     {% for product in products %}
-                        <li class="col-sm-6 col-md-4 col-lg-3">{% render_product product %}</li>
+                        <li class="">{% render_product product %}</li>
                     {% endfor %}
                 </ol>
                 {% include "oscar/partials/pagination.html" %}
@@ -106,6 +115,7 @@
     {% endif %}
 
 {% endblock content %}
+</div>
 
 {% block onbodyload %}
     {{ block.super }}
