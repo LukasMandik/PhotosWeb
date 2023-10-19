@@ -28,9 +28,10 @@
     </head>
 
     <body id="{% block body_id %}default{% endblock %}" class="{% block body_class %}default{% endblock %}">
-        {% include 'navbar.html' %}
-        <script src="{% static 'js/script.js' %}"></script>
-
+{% block navbar %}
+{% include 'navbar.html' %}
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
         {# Main content goes in this 'layout' block #}
         {% block layout %}{% endblock %}
         {# Scripts loaded from a CDN. #}
@@ -42,6 +43,7 @@
 
         {# Local scripts #}
         {% block scripts %}
+                <script src="{% static 'js/script.js' %}"></script>
         {% endblock %}
 
         {# Additional JS scripts #}
@@ -55,5 +57,6 @@
         </script>
 
         {# Page meta-data - this is populated by the 'metadata' template context processor #}
+            <script src="{% static 'js/script.js' %}"></script>
     </body>
 </html>

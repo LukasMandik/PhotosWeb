@@ -56,11 +56,13 @@ INSTALLED_APPS = [
 
     'oscar',
     'oscar.apps.analytics',
-    'oscar.apps.checkout',
+    # 'apps.checkout.apps',
     'oscar.apps.address',
     'oscar.apps.shipping',
     # 'oscar.apps.catalogue',
     'lukas_mandik_photos.catalogue.apps.CatalogueConfig',
+    # 'oscar.apps.checkout',
+    'apps.checkout.apps.CheckoutConfig',
     'oscar.apps.catalogue.reviews',
     'oscar.apps.partner',
     'oscar.apps.basket',
@@ -170,7 +172,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -249,11 +250,9 @@ ACCOUNT_USER_DISPLAY = lambda user: user.get_full_name()
 # ACCOUNT_ADAPTER = 'lukas_mandik_photos.allauth_adapter.CustomAccountAdapter'
 
 
-
 ACCOUNT_FORMS = {
     'signup': 'photos_web.forms.MyCustomSignupForm',
 }
-
 
 # ACCOUNT_SIGNUP_FORM_CLASS = 'photos_web.forms.CustomSignupForm'
 
@@ -270,7 +269,7 @@ ACCOUNT_FORMS = {
 # OSCAR_ALLOW_ANON_CHECKOUT = False
 # OSCAR_EAGER_ALERTS = False
 # OSCAR_DELETE_IMAGE_FILES = True
-# OSCAR_PRODUCTS_PER_PAGE = 20  # Alebo akúkoľvek inú hodnotu, ktorú chcete nastaviť
+# OSCAR_PRODUCTS_PER_PAGE = 10  # Alebo akúkoľvek inú hodnotu, ktorú chcete nastaviť
 # OSCAR_OFFERS_PER_PAGE = 20  # Alebo akúkoľvek inú hodnotu, ktorú chcete nastaviť
 # OSCAR_REVIEWS_PER_PAGE = 10  # Alebo akúkoľvek inú hodnotu, ktorú chcete nastaviť
 # OSCAR_RECENTLY_VIEWED_COOKIE_NAME = 'recently_viewed_products'  # Alebo akýkoľvek iný názov cookie, ktorý chcete použiť
@@ -285,21 +284,41 @@ ACCOUNT_FORMS = {
 # }
 # OSCAR_SLUG_MAP = {}  # prípadne prispôsobte hodnoty podľa potreby
 # OSCAR_SLUG_BLACKLIST = {}  # prípadne prispôsobte hodnoty podľa potreby
-
+OSCAR_SEND_REGISTRATION_EMAIL = True
 
 HAYSTACK_CONNECTIONS = {
-   'default': {
+    'default': {
         'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
-   },
+    },
 }
 COUNTRY_CODE = 'SK'
 CURRENCY_CODE = 'EUR'
 
 COUNTRIES_FIRST = True
 
-
 STRIPE_PUBLISHABLE_KEY = 'pk_test_51MyGsrBPmdTNWuFncQjYDhhXP0TptPzd3YlkIPZjmR08pa6KpJSHLoIWIUzGJbD7WKNwnDRa54nB4OYMzURkjqyn00xi4750W1'
 STRIPE_SECRET_KEY = 'sk_test_51MyGsrBPmdTNWuFnQq4EBaezlsCY1jL6ekZqX0pCPsP5rgXjKuoQdnWlZ1xZPVde64soYFRRCV6p1tQ7bySfQTwc00MHq36vWH'
 
+STRIPE_CURRENCY = "EUR"
 
+OSCAR_INITIAL_ORDER_STATUS = 'Pending'
+OSCAR_INITIAL_LINE_STATUS = 'Pending'
+OSCAR_ORDER_STATUS_PIPELINE = {
+    'Pending': ('Being processed', 'Cancelled',),
+    'Being processed': ('Processed', 'Cancelled',),
+    'Cancelled': (),
+}
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587  # port pre SMTP server
+EMAIL_USE_TLS = True  # pre šifrované spojenie
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = 'swipe47@gmail.com'
+EMAIL_HOST_PASSWORD = 'Swp 474645'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 465  # alebo 587 pre TLS
+# EMAIL_USE_TLS = True  # alebo EMAIL_USE_SSL = True pre SSL
+# EMAIL_HOST_USER = 'swipe47l@gmail.com'
+# EMAIL_HOST_PASSWORD = 'Swp 474645'

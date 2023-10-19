@@ -50,31 +50,45 @@ body{
     background-color: rgba(59, 59, 59, 0.70);
     }
 
+.basket-icon{
+	position: relative;
+}
+.basket-dot{
+ 	position: absolute; /* Nastavíme absolutnú pozíciu pre vnorený prvok */
+  	bottom: 4px; /* Prvok bude umiestnený v hornom okraji rodičovského elementu */
+  	right: 2px; /* Prvok bude umiestnený v pravom okraji rodičovského elementu */
+  	background-color: rgba(255, 93, 65, 0.89); /* Prispôsobte si farbu a ďalšie vlastnosti podľa potreby */
+	width: 7px; /* Prispôsobte si šírku a výšku vnoreného prvku podľa potreby */
+  	height: 7px;
+	border-radius: 50%;
+  	transform: translate(50%, 50%); /* Centruje prvok horizontálne vzhľadom na jeho veľkosť */
+}
+
 
 /*Navbar*/
 .main_navbar{
 	width: 100%;
 	height: 130px;
-	background-color: rgba(59, 59, 59, 0.70);
-	/*backdrop-filter: blur(5px);*/
-	backface-visibility: hidden;
-	transform: translateZ(0px);
-	-webkit-backdrop-filter: blur(5px) saturate(1.2);
-	backdrop-filter: blur(5px) saturate(1.2);
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+	background: rgb(255, 255, 255);
 	position: fixed;
 	top: 0;
 	left: 0;
 	padding: 0 1rem;
-	opacity: 0.9;
+	opacity: 1;
 	z-index: 100;
 	/*transition: .5s ease-in-out;*/
+	backface-visibility: hidden;
+	transform: translateZ(0px);
+	-webkit-backdrop-filter: blur(5px) saturate(1.2);
+	backdrop-filter: blur(5px) saturate(1.2);
+	/*box-shadow: 0 1px 10px rgba(0, 0, 0, 0.04);*/
+	border-bottom: 1px solid rgba(38, 38, 38, 0.06);
+    margin-bottom: 0.625rem;
 }
 /*.navbar.small {*/
 /*	background-color: transparent;*/
 /*  	height: 50px;*/
 /*}*/
-
 
 .main_navbar.small {
   	height: 50px;
@@ -119,6 +133,7 @@ body{
 
 .main_navbar .menu ul{
 	display: flex;
+	margin: 0;
 }
 
 .main_navbar .menu ul li{
@@ -132,17 +147,19 @@ body{
 	text-align: center;
 	/*padding: 10px 1px;*/
 	/*border-radius: 25px;*/
-	color: var(--primary-color1);
+	color: #171717;
 	text-transform: uppercase;
-	font-size: 0.72rem;
+	font-size: 0.83rem;
+	font-weight: lighter;
+	text-decoration: none;
 }
 
 .main_navbar .menu ul li::after{
 	content: '';
 	width: 0;
-	height: 2px;
+	height: 1px;
 	border-radius: 2px;
-	background: var(--primary-color1);
+	background: #171717;
 	display: block;
 	margin: auto;
 	transition: 0.5s;
@@ -764,6 +781,7 @@ li.dropdown{
 .samples_container{
 	margin-top: 45px;
 	margin-bottom: 105px;
+
 }
 
 .sample_photo1,

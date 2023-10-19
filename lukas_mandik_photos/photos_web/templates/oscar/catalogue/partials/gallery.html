@@ -1,5 +1,6 @@
 {% load i18n %}
 {% load image_tags %}
+{% load static %}
 
 {% with all_images=product.get_all_images %}
     {# use length rather then count as the images get queried anyways #}
@@ -28,9 +29,26 @@
             </div>
 
             <ol class="carousel-indicators img-thumbnail">
+<!--                    <li data-target="#product_gallery" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}">-->
+<!--                        {% oscar_thumbnail all_images.0.original "65x55" crop="center" as thumb %}-->
+<!--                        <img src="{{ thumb.url }}" alt="{{ product.get_title }}" />-->
+<!--                    </li>-->
+
+<!--                    <li data-target="#product_gallery" data-slide-to="0" class="{% if forloop.first %}active{% endif %}">-->
+<!--                        <div class="sample_mini_photo">-->
+<!--                            <div class="sample_photo1" >-->
+<!--                                <img src="{% static 'media/livingroom4.png' %}">-->
+<!--                                <div class="inner_sample_photo">-->
+<!--                                    {% oscar_thumbnail all_images.0.original "65x55" crop="center" as thumb %}-->
+<!--                                    <img src="{{ thumb.url }}">-->
+<!--                                 </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                    </li>-->
                 {% for image in all_images %}
-                    <li data-target="#product_gallery" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}">
-                        {% oscar_thumbnail image.original "65x55" crop="center" as thumb %}
+                    <li data-target="#product_gallery" data-slide-to="{{ forloop.counter0 }}+1" class="{% if forloop.first %}active{% endif %}">
+                        {% oscar_thumbnail image.original "65x100" crop="center" as thumb %}
                         <img src="{{ thumb.url }}" alt="{{ product.get_title }}" />
                     </li>
                 {% endfor %}
@@ -54,4 +72,32 @@
         </div>
 
     {% endif %}
+
+
+<!--        <h2> Choose your piece of nature </h2>-->
+
+<!--        <div class="samples_container">-->
+<!--            <div class="sample_photo1" >-->
+<!--                <a href="/store/products_gallery/"><img src="{% static 'media/livingroom4.png' %}"></a>-->
+<!--                <div class="inner_sample_photo">-->
+<!--                    {% oscar_thumbnail all_images.0.original "440x400" upscale=False as thumb %}-->
+<!--                    <img src="{{ thumb.url }}">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="sample_photo2">-->
+<!--                <img src="{% static 'media/livingroom2.png' %}">-->
+<!--                <div class="inner_sample_photo2">-->
+<!--                    {% oscar_thumbnail all_images.0.original "440x400" upscale=False as thumb %}-->
+<!--                    <img src="{{ thumb.url }}">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--&lt;!&ndash;            <div class="sample_photo3">&ndash;&gt;-->
+<!--&lt;!&ndash;                <img src="{% static 'media/livingroom6.png'%}">&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="inner_sample_photo3">&ndash;&gt;-->
+<!--&lt;!&ndash;                    {% oscar_thumbnail all_images.0.original "440x400" upscale=False as thumb %}&ndash;&gt;-->
+<!--&lt;!&ndash;                    <img src="{{ thumb.url }}">&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--        </div>-->
+
 {% endwith %}

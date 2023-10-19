@@ -7,7 +7,8 @@
 {% load display_tags %}
 {% load i18n %}
 {% load purchase_info_tags %}
-
+{% load image_tags %}
+{% load static %}
 {% block title %}
     {{ product.get_meta_title }} | {{ block.super }}
 {% endblock %}
@@ -188,6 +189,38 @@
         {% endblock %}
 
     </div><!-- /row -->
+
+{% with all_images=product.get_all_images %}
+
+
+        <div class="samples_container">
+            <div class="sample_photo1" >
+                <a href="/store/products_gallery/"><img src="{% static 'media/livingroom4.png' %}"></a>
+                <div class="inner_sample_photo">
+                    {% oscar_thumbnail all_images.0.original "440x400" upscale=False as thumb %}
+                    <img src="{{ thumb.url }}">
+                </div>
+            </div>
+            <div class="sample_photo2">
+                <img src="{% static 'media/livingroom2.png' %}">
+                <div class="inner_sample_photo2">
+                    {% oscar_thumbnail all_images.0.original "440x400" upscale=False as thumb %}
+                    <img src="{{ thumb.url }}">
+                </div>
+            </div>
+            <div class="sample_photo3">
+                <img src="{% static 'media/livingroom6.png'%}">
+                <div class="inner_sample_photo3">
+                    {% oscar_thumbnail all_images.0.original "440x400" upscale=False as thumb %}
+                    <img src="{{ thumb.url }}">
+                </div>
+            </div>
+        </div>
+
+{% endwith %}
+
+
+
 
     {% block product_description %}
         {% if product.description %}
