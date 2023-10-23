@@ -50,27 +50,28 @@
     <div class="row">
 
         {% block product_gallery %}
-        <div class="col-sm-6">
+        <div class="detail_container">
             {% include "oscar/catalogue/partials/gallery.html" %}
         </div>
         {% endblock %}
 
         {% block product_main %}
-        <div class="col-sm-6 product_main">
+        <div class="detail_container product_main">
             {% comment %}
                 This is a bit clunky here.  Better to have some kind of JS-driven dashboard menu that
                 pops out when clicked.  A bit like the Django-Debug-Toolbar button
             {% endcomment %}
             {% if user.is_staff %}
-                <a class="float-right d-none d-md-block" href="{% url 'dashboard:catalogue-product' pk=product.id %}">
+                <a class="" href="{% url 'dashboard:catalogue-product' pk=product.id %}">
                     <small><i class="fas fa-pencil-alt"></i> {% trans "Edit this product" %}</small>
                 </a>
             {% endif %}
             <h1>{{ product.get_title }}</h1>
             {% if product.is_parent %}
-                <h2 id="price_display"></h2>
+            <p id="price_display">{% trans "Free" %}</p>
+<!--                <h2 id="price_display"></h2>-->
             {% else %}
-               `{% block product_stock_record %}
+               {% block product_stock_record %}
                     {% include "oscar/catalogue/partials/stock_record.html" with verbose=1 %}
                 {% endblock %}
             {% endif %}
@@ -87,7 +88,7 @@
                 {% endblock %}
             {% else %}
                 {% block variants %}
-                    <h2>{% trans 'Size:' %}</h2>
+                    <h2>{% trans 'Size' %}</h2>
                     <div class="my_variant">
                         {% for child in product.children.public %}
                             {% purchase_info_for_product request child as child_session %}

@@ -26,7 +26,7 @@ def hello_world(request):
 
 
 def home(request):
-    photos = Photo.objects.filter(image_name="_DSC4061.jpg")
+    photos = Photo.objects.filter(image_name="_DSC9014.JPG")
     top_likes_photos = Photo.objects.annotate(like_count=Count('likes')).order_by('-likes')[:3]
 
     # if photos:

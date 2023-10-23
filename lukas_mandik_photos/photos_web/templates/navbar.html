@@ -16,27 +16,6 @@
 
                     <li><a href="/catalogue/">Print Shop</a></li>
                     <li><a href="/gallery">Gallery</a></li>
-                    <li><a href="{% url 'basket:summary' %}">
-                        <div class="basket-icon">
-                            <i class="fas fa-shopping-bag">
-                                {% if not request.basket.is_empty %}
-                                 <div class="basket-dot"></div>
-                                {% endif %}
-                            </i>
-                        </div>
-<!--                        {% trans "Basket" %}-->
-<!--                        {% if not request.basket.is_empty %}-->
-<!--                            {% if request.basket.is_tax_known %}-->
-<!--                                {% blocktrans with total=request.basket.total_incl_tax|currency:request.basket.currency %}-->
-<!--                                : {{ total }}-->
-<!--                                {% endblocktrans %}-->
-<!--                                {% else %}-->
-<!--                                {% blocktrans with total=request.basket.total_excl_tax|currency:request.basket.currency %}-->
-<!--                                : {{ total }}-->
-<!--                                {% endblocktrans %}-->
-<!--                            {% endif %}-->
-<!--                        {% endif %}-->
-                    </a></li>
                     <!--                    <li><a href="">Contact</a></li>-->
                     {% if user.is_authenticated %}
                         <li class="nav-item mr-2">
@@ -69,10 +48,35 @@
                     {% else %}
                     <li><a href="/logout">Logout</a></li>
                     {% endif %}
+                    {% if not request.basket.is_empty %}
+                    <li><a href="{% url 'basket:summary' %}">
+                        <div class="basket-icon">
+                            <i class="fas fa-shopping-bag">
+                                {% if not request.basket.is_empty %}
+                                 <div class="basket-dot"></div>
+                                {% endif %}
+                            </i>
+                        </div>
+<!--                        {% trans "Basket" %}-->
+<!--                        {% if not request.basket.is_empty %}-->
+<!--                            {% if request.basket.is_tax_known %}-->
+<!--                                {% blocktrans with total=request.basket.total_incl_tax|currency:request.basket.currency %}-->
+<!--                                : {{ total }}-->
+<!--                                {% endblocktrans %}-->
+<!--                                {% else %}-->
+<!--                                {% blocktrans with total=request.basket.total_excl_tax|currency:request.basket.currency %}-->
+<!--                                : {{ total }}-->
+<!--                                {% endblocktrans %}-->
+<!--                            {% endif %}-->
+<!--                        {% endif %}-->
+                    </a></li>
+                    {% else %}
+                    {% endif %}
+
                 </ul>
             </div>
             <div class="hamburger">
-                <i class="fas fa-bars"></i>
+                <i class=" fas fa-bars"></i>
             </div>
         </div>
     </div>

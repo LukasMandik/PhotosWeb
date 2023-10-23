@@ -138,13 +138,13 @@
     const leftContainerRect = leftContainer.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    if (leftContainerRect.bottom <= windowHeight - 180) {
+    if (leftContainerRect.bottom <= windowHeight - 2400) {
       rightContainer.classList.remove('hidden');
     } else {
       rightContainer.classList.add('hidden');
     }
 
-        if (leftContainerRect.bottom <= windowHeight - 400) {
+        if (leftContainerRect.bottom <= windowHeight - 2600) {
       downContainer.classList.remove('hidden2');
     } else {
       downContainer.classList.add('hidden2');

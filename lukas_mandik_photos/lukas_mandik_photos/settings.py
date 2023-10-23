@@ -35,6 +35,8 @@ LIKED_PHOTOS_COOKIE_MAX_AGE = 31536000
 USE_TZ = True
 
 INSTALLED_APPS = [
+    'livereload',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,7 +49,6 @@ INSTALLED_APPS = [
     'django_countries',
 
     'photos_web',
-    'livereload',
 
     'allauth',
     'allauth.account',
@@ -110,9 +111,15 @@ MIDDLEWARE = [
 
     'oscar.apps.basket.middleware.BasketMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'livereload.middleware.LiveReloadScript',
 ]
 
 ROOT_URLCONF = 'lukas_mandik_photos.urls'
+#
+#
+# MIDDLEWARE_CLASSES = (
+#     'livereload.middleware.LiveReloadScript',
+# )
 
 TEMPLATES = [
     {
