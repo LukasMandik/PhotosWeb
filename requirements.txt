@@ -63,7 +63,7 @@ ptyprocess
 purl
 pycountry
 pycparser
-pyexifinfo
+
 PyExifTool
 PyJWT
 pyproject_hooks
