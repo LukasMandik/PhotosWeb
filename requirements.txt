@@ -37,6 +37,7 @@ exif==1.6.0
 factory-boy==3.2.1
 Faker==18.4.0
 filelock
+gunicorn
 h11==0.14.0
 idna==3.4
 importlib-metadata
