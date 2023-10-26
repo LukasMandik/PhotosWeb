@@ -14,6 +14,14 @@ import os
 from oscar.defaults import *
 from pathlib import Path
 
+import environ
+
+env = environ.Env()
+
+environ.Env.read_env()
+
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ei&1mf4l=t+ioj24gzd&&ch1&dz#h4h)qhs6v)o!ejt@2zdi4x'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -60,8 +68,8 @@ INSTALLED_APPS = [
     # 'apps.checkout.apps',
     'oscar.apps.address',
     'oscar.apps.shipping',
-    # 'oscar.apps.catalogue',
-    'lukas_mandik_photos.catalogue.apps.CatalogueConfig',
+    'oscar.apps.catalogue',
+    # 'lukas_mandik_photos.catalogue.apps.CatalogueConfig',
     # 'oscar.apps.checkout',
     'apps.checkout.apps.CheckoutConfig',
     'oscar.apps.catalogue.reviews',
@@ -170,17 +178,18 @@ WSGI_APPLICATION = 'lukas_mandik_photos.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'lukasmandik',
-        'USER': 'postgres',
-        'PASSWORD': '660747',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': env('DB_NAME'),
+        # 'USER': env('DB_USERNAME'),
+        # 'PASSWORD': env('DB_PASSWORD'),
+        # 'HOST': env('DB_HOST'),
+        # 'PORT': env('DB_PORT'),
     }
 }
+import dj_database_url
 
-# Password validation
-# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
+DATABASES["default"] = dj_database_url.parse(env('EXTERNAL_DB'))
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -303,8 +312,8 @@ CURRENCY_CODE = 'EUR'
 
 COUNTRIES_FIRST = True
 
-STRIPE_PUBLISHABLE_KEY = 'pk_test_51MyGsrBPmdTNWuFncQjYDhhXP0TptPzd3YlkIPZjmR08pa6KpJSHLoIWIUzGJbD7WKNwnDRa54nB4OYMzURkjqyn00xi4750W1'
-STRIPE_SECRET_KEY = 'sk_test_51MyGsrBPmdTNWuFnQq4EBaezlsCY1jL6ekZqX0pCPsP5rgXjKuoQdnWlZ1xZPVde64soYFRRCV6p1tQ7bySfQTwc00MHq36vWH'
+STRIPE_PUBLISHABLE_KEY = env('STRIPE_PUBLISHABLE_KEY')
+STRIPE_SECRET_KEY = env('STRIPE_SECRET_KEY')
 
 STRIPE_CURRENCY = "EUR"
 
@@ -322,10 +331,4 @@ EMAIL_PORT = 587  # port pre SMTP server
 EMAIL_USE_TLS = True  # pre šifrované spojenie
 EMAIL_USE_SSL = False
 EMAIL_HOST_USER = 'swipe47@gmail.com'
-EMAIL_HOST_PASSWORD = 'Swp 474645'
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 465  # alebo 587 pre TLS
-# EMAIL_USE_TLS = True  # alebo EMAIL_USE_SSL = True pre SSL
-# EMAIL_HOST_USER = 'swipe47l@gmail.com'
-# EMAIL_HOST_PASSWORD = 'Swp 474645'
+EMAIL_HOST_PASSWORD = ''

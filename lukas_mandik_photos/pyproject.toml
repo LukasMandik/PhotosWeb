@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "lukas-mandik-photos"
+version = "0.1.0"
+description = ""
+authors = ["LukasMandik <swipe47@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
