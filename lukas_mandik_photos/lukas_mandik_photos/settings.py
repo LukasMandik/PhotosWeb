@@ -32,9 +32,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'RENDER' not in os.environ
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "lvh.me"]
+
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+
 
 LOGIN_REDIRECT_URL = '/'
 
@@ -110,6 +115,7 @@ SOCIALACCOUNT_LOGIN_ON_GET = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -221,15 +227,54 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 
+# STATIC_URL = '/static/'
+# MEDIA_URL = '/images/'
+#
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'static'
+# ]
+#
+# MEDIA_ROOT = BASE_DIR / 'static/images'
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+
+
+
+
+
+
+# run python3 manage.py collectstatic
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
+
+if not DEBUG:
+    # Tell Django to copy statics to the `staticfiles` directory
+    # in your application directory on Render.
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+    # Turn on WhiteNoise storage backend that takes care of compressing static files
+    # and creating unique names for each version so they can safely be cached forever.
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
+
 MEDIA_URL = '/images/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'static'
-]
+
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'static'
+# ]
 
 MEDIA_ROOT = BASE_DIR / 'static/images'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

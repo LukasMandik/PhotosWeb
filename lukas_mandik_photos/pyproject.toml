@@ -6,7 +6,8 @@ authors = ["LukasMandik <swipe47@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-
+python = "^3.11"
+whitenoise = {extras = ["brotli"], version = "^6.6.0"}
 
 
 [build-system]
