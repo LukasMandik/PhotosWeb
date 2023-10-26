@@ -42,7 +42,7 @@ idna==3.4
 importlib-metadata
 installer==0.7.0
 iptools==0.6.1
-jaraco.classes==3.3.0
+jaraco.classes
 jsonschema==4.17.3
 keyring==24.2.0
 more-itertools==10.1.0
