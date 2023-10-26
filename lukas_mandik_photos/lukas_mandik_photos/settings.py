@@ -170,7 +170,7 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 
 ]
-WSGI_APPLICATION = 'lukas_mandik_photos.wsgi.application'
+WSGI_APPLICATION = 'lukas_mandik_photos.lukas_mandik_photos.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
