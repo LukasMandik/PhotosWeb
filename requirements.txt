@@ -45,7 +45,7 @@ iptools==0.6.1
 jaraco.classes
 jsonschema==4.17.3
 keyring
-more-itertools==10.1.0
+more-itertools
 msgpack==1.0.7
 oauthlib==3.2.2
 outcome==1.2.0
