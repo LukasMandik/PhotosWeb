@@ -36,7 +36,7 @@ dulwich==0.21.6
 exif==1.6.0
 factory-boy==3.2.1
 Faker==18.4.0
-filelock==3.12.4
+filelock
 h11==0.14.0
 idna==3.4
 importlib-metadata==6.8.0
