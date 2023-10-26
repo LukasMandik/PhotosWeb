@@ -44,7 +44,7 @@ installer==0.7.0
 iptools==0.6.1
 jaraco.classes
 jsonschema==4.17.3
-keyring==24.2.0
+keyring
 more-itertools==10.1.0
 msgpack==1.0.7
 oauthlib==3.2.2
